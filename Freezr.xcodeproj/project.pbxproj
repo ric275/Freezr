@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0404C12D1DCAA2690034DCA6 /* FridgeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404C12C1DCAA2690034DCA6 /* FridgeImageViewController.swift */; };
+		0404C12F1DCAAC3E0034DCA6 /* FreezrImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404C12E1DCAAC3E0034DCA6 /* FreezrImageViewController.swift */; };
+		0443A81C1DC65AD400B2A7A0 /* Freezr Demo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0443A81B1DC65AD400B2A7A0 /* Freezr Demo.mp4 */; };
+		04642E6B1DAFADBF002E7568 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642E6A1DAFADBF002E7568 /* AboutViewController.swift */; };
+		0467321A1DAAE6FA00EEC292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046732191DAAE6FA00EEC292 /* AppDelegate.swift */; };
+		0467321F1DAAE6FA00EEC292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467321D1DAAE6FA00EEC292 /* Main.storyboard */; };
+		046732221DAAE6FA00EEC292 /* Freezr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 046732201DAAE6FA00EEC292 /* Freezr.xcdatamodeld */; };
+		046732241DAAE6FA00EEC292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046732231DAAE6FA00EEC292 /* Assets.xcassets */; };
+		046732271DAAE6FA00EEC292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046732251DAAE6FA00EEC292 /* LaunchScreen.storyboard */; };
+		046732311DAAF38500EEC292 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046732301DAAF38500EEC292 /* ItemViewController.swift */; };
+		0496E1EC1DB17CE20052E17B /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496E1EB1DB17CE20052E17B /* ShoppingListViewController.swift */; };
+		0498A0331E26A634001D9E50 /* addSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0498A0321E26A634001D9E50 /* addSound.mp3 */; };
+		04B7FAEB1FD36F3F0069D60F /* AddToSLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7FAEA1FD36F3F0069D60F /* AddToSLViewController.swift */; };
+		04E4204A1DABF28700390EF5 /* FreezrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E420491DABF28700390EF5 /* FreezrViewController.swift */; };
+		04EC76101E54D1AA0076E840 /* shoppingListSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04EC760F1E54D1AA0076E840 /* shoppingListSound.mp3 */; };
+		04EC76121E54D46E0076E840 /* deleteSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04EC76111E54D46E0076E840 /* deleteSound.mp3 */; };
+		04EC76141E54D7BD0076E840 /* notifSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04EC76131E54D7BD0076E840 /* notifSound.mp3 */; };
+		04F61DBE1DC566930053E9B9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F61DBD1DC566930053E9B9 /* InfoViewController.swift */; };
+		04FC5AC01DC959A800440657 /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC5ABF1DC959A800440657 /* FridgeViewController.swift */; };
+		04FC5AC61DC9622700440657 /* FridgeItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC5AC51DC9622700440657 /* FridgeItemViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0404C12C1DCAA2690034DCA6 /* FridgeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeImageViewController.swift; sourceTree = "<group>"; };
+		0404C12E1DCAAC3E0034DCA6 /* FreezrImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezrImageViewController.swift; sourceTree = "<group>"; };
+		0443A81B1DC65AD400B2A7A0 /* Freezr Demo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Freezr Demo.mp4"; sourceTree = "<group>"; };
+		04642E6A1DAFADBF002E7568 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		046732161DAAE6FA00EEC292 /* Freezr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freezr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		046732191DAAE6FA00EEC292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0467321E1DAAE6FA00EEC292 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		046732211DAAE6FA00EEC292 /* Freezr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Freezr.xcdatamodel; sourceTree = "<group>"; };
+		046732231DAAE6FA00EEC292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		046732261DAAE6FA00EEC292 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		046732281DAAE6FA00EEC292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046732301DAAF38500EEC292 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		0496E1EB1DB17CE20052E17B /* ShoppingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		0498A0321E26A634001D9E50 /* addSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = addSound.mp3; sourceTree = "<group>"; };
+		04B7FAEA1FD36F3F0069D60F /* AddToSLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToSLViewController.swift; sourceTree = "<group>"; };
+		04E420491DABF28700390EF5 /* FreezrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezrViewController.swift; sourceTree = "<group>"; };
+		04EC760F1E54D1AA0076E840 /* shoppingListSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shoppingListSound.mp3; sourceTree = "<group>"; };
+		04EC76111E54D46E0076E840 /* deleteSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = deleteSound.mp3; sourceTree = "<group>"; };
+		04EC76131E54D7BD0076E840 /* notifSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = notifSound.mp3; sourceTree = "<group>"; };
+		04F61DBD1DC566930053E9B9 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		04FC5ABF1DC959A800440657 /* FridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
+		04FC5AC51DC9622700440657 /* FridgeItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeItemViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		046732131DAAE6FA00EEC292 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04243D021FCEE0AB00D5F85E /* Shopping List */ = {
+			isa = PBXGroup;
+			children = (
+				0496E1EB1DB17CE20052E17B /* ShoppingListViewController.swift */,
+				04B7FAEA1FD36F3F0069D60F /* AddToSLViewController.swift */,
+			);
+			name = "Shopping List";
+			sourceTree = "<group>";
+		};
+		0467320D1DAAE6FA00EEC292 = {
+			isa = PBXGroup;
+			children = (
+				046732181DAAE6FA00EEC292 /* Freezr */,
+				046732171DAAE6FA00EEC292 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		046732171DAAE6FA00EEC292 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				046732161DAAE6FA00EEC292 /* Freezr.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		046732181DAAE6FA00EEC292 /* Freezr */ = {
+			isa = PBXGroup;
+			children = (
+				046732191DAAE6FA00EEC292 /* AppDelegate.swift */,
+				04FC5AC41DC95D3E00440657 /* Fridge */,
+				04FC5AC31DC95D3200440657 /* Freezr */,
+				04243D021FCEE0AB00D5F85E /* Shopping List */,
+				04F61DBD1DC566930053E9B9 /* InfoViewController.swift */,
+				04642E6A1DAFADBF002E7568 /* AboutViewController.swift */,
+				0467321D1DAAE6FA00EEC292 /* Main.storyboard */,
+				046732231DAAE6FA00EEC292 /* Assets.xcassets */,
+				046732251DAAE6FA00EEC292 /* LaunchScreen.storyboard */,
+				046732281DAAE6FA00EEC292 /* Info.plist */,
+				0443A81B1DC65AD400B2A7A0 /* Freezr Demo.mp4 */,
+				0498A0321E26A634001D9E50 /* addSound.mp3 */,
+				04EC760F1E54D1AA0076E840 /* shoppingListSound.mp3 */,
+				04EC76111E54D46E0076E840 /* deleteSound.mp3 */,
+				04EC76131E54D7BD0076E840 /* notifSound.mp3 */,
+				046732201DAAE6FA00EEC292 /* Freezr.xcdatamodeld */,
+			);
+			path = Freezr;
+			sourceTree = "<group>";
+		};
+		04FC5AC31DC95D3200440657 /* Freezr */ = {
+			isa = PBXGroup;
+			children = (
+				04E420491DABF28700390EF5 /* FreezrViewController.swift */,
+				046732301DAAF38500EEC292 /* ItemViewController.swift */,
+				0404C12E1DCAAC3E0034DCA6 /* FreezrImageViewController.swift */,
+			);
+			name = Freezr;
+			sourceTree = "<group>";
+		};
+		04FC5AC41DC95D3E00440657 /* Fridge */ = {
+			isa = PBXGroup;
+			children = (
+				04FC5ABF1DC959A800440657 /* FridgeViewController.swift */,
+				04FC5AC51DC9622700440657 /* FridgeItemViewController.swift */,
+				0404C12C1DCAA2690034DCA6 /* FridgeImageViewController.swift */,
+			);
+			name = Fridge;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		046732151DAAE6FA00EEC292 /* Freezr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0467322B1DAAE6FA00EEC292 /* Build configuration list for PBXNativeTarget "Freezr" */;
+			buildPhases = (
+				046732121DAAE6FA00EEC292 /* Sources */,
+				046732131DAAE6FA00EEC292 /* Frameworks */,
+				046732141DAAE6FA00EEC292 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Freezr;
+			productName = Freezr;
+			productReference = 046732161DAAE6FA00EEC292 /* Freezr.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0467320E1DAAE6FA00EEC292 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Jack Taylor";
+				TargetAttributes = {
+					046732151DAAE6FA00EEC292 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4LK849K8T4;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 046732111DAAE6FA00EEC292 /* Build configuration list for PBXProject "Freezr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0467320D1DAAE6FA00EEC292;
+			productRefGroup = 046732171DAAE6FA00EEC292 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				046732151DAAE6FA00EEC292 /* Freezr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		046732141DAAE6FA00EEC292 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046732271DAAE6FA00EEC292 /* LaunchScreen.storyboard in Resources */,
+				0443A81C1DC65AD400B2A7A0 /* Freezr Demo.mp4 in Resources */,
+				04EC76101E54D1AA0076E840 /* shoppingListSound.mp3 in Resources */,
+				04EC76121E54D46E0076E840 /* deleteSound.mp3 in Resources */,
+				046732241DAAE6FA00EEC292 /* Assets.xcassets in Resources */,
+				04EC76141E54D7BD0076E840 /* notifSound.mp3 in Resources */,
+				0498A0331E26A634001D9E50 /* addSound.mp3 in Resources */,
+				0467321F1DAAE6FA00EEC292 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		046732121DAAE6FA00EEC292 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046732311DAAF38500EEC292 /* ItemViewController.swift in Sources */,
+				0467321A1DAAE6FA00EEC292 /* AppDelegate.swift in Sources */,
+				0496E1EC1DB17CE20052E17B /* ShoppingListViewController.swift in Sources */,
+				04F61DBE1DC566930053E9B9 /* InfoViewController.swift in Sources */,
+				04B7FAEB1FD36F3F0069D60F /* AddToSLViewController.swift in Sources */,
+				04E4204A1DABF28700390EF5 /* FreezrViewController.swift in Sources */,
+				04FC5AC61DC9622700440657 /* FridgeItemViewController.swift in Sources */,
+				04FC5AC01DC959A800440657 /* FridgeViewController.swift in Sources */,
+				04642E6B1DAFADBF002E7568 /* AboutViewController.swift in Sources */,
+				0404C12F1DCAAC3E0034DCA6 /* FreezrImageViewController.swift in Sources */,
+				046732221DAAE6FA00EEC292 /* Freezr.xcdatamodeld in Sources */,
+				0404C12D1DCAA2690034DCA6 /* FridgeImageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0467321D1DAAE6FA00EEC292 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0467321E1DAAE6FA00EEC292 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		046732251DAAE6FA00EEC292 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046732261DAAE6FA00EEC292 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		046732291DAAE6FA00EEC292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0467322A1DAAE6FA00EEC292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0467322C1DAAE6FA00EEC292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4LK849K8T4;
+				INFOPLIST_FILE = Freezr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.blueinkcode.FreezrApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0467322D1DAAE6FA00EEC292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4LK849K8T4;
+				INFOPLIST_FILE = Freezr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.blueinkcode.FreezrApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		046732111DAAE6FA00EEC292 /* Build configuration list for PBXProject "Freezr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046732291DAAE6FA00EEC292 /* Debug */,
+				0467322A1DAAE6FA00EEC292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0467322B1DAAE6FA00EEC292 /* Build configuration list for PBXNativeTarget "Freezr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0467322C1DAAE6FA00EEC292 /* Debug */,
+				0467322D1DAAE6FA00EEC292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		046732201DAAE6FA00EEC292 /* Freezr.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				046732211DAAE6FA00EEC292 /* Freezr.xcdatamodel */,
+			);
+			currentVersion = 046732211DAAE6FA00EEC292 /* Freezr.xcdatamodel */;
+			path = Freezr.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0467320E1DAAE6FA00EEC292 /* Project object */;
+}
