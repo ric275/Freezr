@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "freezerSwitchOn" : true,
             "fridgeSwitchOn" : true,
             "preFreqNeverTicked" : false,
+            "preFreq2WeekTicked" : true,
             "preFreq1WeekTicked" : true,
             "preFreq2DayTicked" : true
         ]
