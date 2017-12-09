@@ -97,6 +97,7 @@ class AddToSLViewController: UIViewController, UIImagePickerControllerDelegate, 
             let SLItem = ShoppingListItem(context: context)
             let defaultImage = UIImage(named: "SLIcon")
             SLItem.name = itemName.text
+            SLItem.isChecked = false
             
             if itemImage.image == nil {
                 SLItem.image = UIImageJPEGRepresentation(defaultImage!, 0.05)! as Data?

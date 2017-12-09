@@ -52,9 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "preFreq1WeekTicked" : true,
             "preFreq2DayTicked" : true
         ]
-        
+
         UserDefaults.standard.register(defaults: userDefaultsDefaults)
-        
+
         return true
     }
     
