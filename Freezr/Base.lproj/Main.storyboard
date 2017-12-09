@@ -282,17 +282,10 @@
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFK-tj-ygG">
-                                <rect key="frame" x="150.66666666666666" y="436" width="74" height="74"/>
-                                <state key="normal" image="freezrAddButton"/>
-                                <connections>
-                                    <action selector="addToFreezerTapped:" destination="L68-X7-ABi" eventType="touchUpInside" id="S43-Xy-524"/>
-                                    <action selector="addToFridgeTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="izD-CX-mEl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHx-Wc-0uh">
-                                <rect key="frame" x="150" y="603" width="74" height="74"/>
-                                <state key="normal" image="freezrDeleteButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHx-Wc-0uh">
+                                <rect key="frame" x="135.66666666666666" y="513" width="103" height="32"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Delete item">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -301,14 +294,15 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An image is required to add an item to your freezer." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKi-NB-IFu">
-                                <rect key="frame" x="50" y="517" width="275" height="15"/>
+                                <rect key="frame" x="50" y="475" width="275" height="15"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-YZ-Spl">
-                                <rect key="frame" x="150" y="517" width="74" height="74"/>
-                                <state key="normal" image="freezrShoppingListButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-YZ-Spl">
+                                <rect key="frame" x="100.66666666666669" y="473" width="174" height="32"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Add item to shopping list">
                                     <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -316,16 +310,26 @@
                                     <action selector="addToSLTapped:" destination="L68-X7-ABi" eventType="touchUpInside" id="Wpd-J1-d0k"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFK-tj-ygG">
+                                <rect key="frame" x="118.66666666666669" y="436" width="138" height="32"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Add item to freezer">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToFreezerTapped:" destination="L68-X7-ABi" eventType="touchUpInside" id="S43-Xy-524"/>
+                                    <action selector="addToFridgeTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="izD-CX-mEl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="top" secondItem="S6k-Fu-edo" secondAttribute="bottom" constant="2" id="0Xz-RT-3jV"/>
                             <constraint firstItem="S6k-Fu-edo" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="4do-qe-Pj5"/>
-                            <constraint firstItem="jHx-Wc-0uh" firstAttribute="top" secondItem="gKi-NB-IFu" secondAttribute="bottom" constant="8" id="8IN-1C-uaS"/>
-                            <constraint firstItem="ZEy-YZ-Spl" firstAttribute="top" secondItem="gKi-NB-IFu" secondAttribute="bottom" constant="8" id="Au9-yL-Hem"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="top" secondItem="NDl-H8-uue" secondAttribute="bottom" constant="2" id="DUn-X6-q1u"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="Ftc-hm-kcn"/>
                             <constraint firstItem="NDl-H8-uue" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="JOi-fu-ZLo"/>
+                            <constraint firstItem="jHx-Wc-0uh" firstAttribute="top" secondItem="ZEy-YZ-Spl" secondAttribute="bottom" constant="8" id="JZe-7M-aaU"/>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="LhD-7S-uhT"/>
                             <constraint firstItem="7wE-fg-BPV" firstAttribute="top" secondItem="dlb-8f-5Lo" secondAttribute="bottom" constant="20" id="Lm6-Cm-TFd"/>
                             <constraint firstItem="gKi-NB-IFu" firstAttribute="top" secondItem="VFK-tj-ygG" secondAttribute="bottom" constant="7" id="Pij-CV-RZw"/>
@@ -335,9 +339,10 @@
                             <constraint firstItem="mQP-c0-GzI" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="Ry8-bh-z5X"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="width" secondItem="7wE-fg-BPV" secondAttribute="width" id="T5k-Md-HiX"/>
                             <constraint firstItem="gKi-NB-IFu" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="WsK-7e-132"/>
-                            <constraint firstItem="jHx-Wc-0uh" firstAttribute="leading" secondItem="ZSs-Xm-hP9" secondAttribute="leading" constant="87" id="Y6w-cg-m8p"/>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="top" secondItem="5rx-kh-Ue2" secondAttribute="bottom" constant="30" id="bw9-JR-4Fz"/>
+                            <constraint firstItem="ZEy-YZ-Spl" firstAttribute="top" secondItem="VFK-tj-ygG" secondAttribute="bottom" constant="5" id="cFf-z5-8Kz"/>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="width" secondItem="5rx-kh-Ue2" secondAttribute="width" id="dtH-OV-gEF"/>
+                            <constraint firstItem="jHx-Wc-0uh" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="f5U-3Z-YRp"/>
                             <constraint firstItem="ZEy-YZ-Spl" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="ndu-PX-bke"/>
                             <constraint firstItem="VFK-tj-ygG" firstAttribute="top" secondItem="uI7-d4-1Uz" secondAttribute="bottom" constant="8" id="nhP-X1-ei2"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="top" secondItem="7wE-fg-BPV" secondAttribute="bottom" constant="30" id="omB-gL-RAm"/>
@@ -1076,9 +1081,6 @@
         <image name="TabBarSelectedFridgeIcon" width="25" height="25"/>
         <image name="TabBarSelectedShoppingListIcon" width="25" height="25"/>
         <image name="TabBarShoppingIcon" width="25" height="25"/>
-        <image name="freezrAddButton" width="74" height="74"/>
-        <image name="freezrDeleteButton" width="149" height="149"/>
-        <image name="freezrShoppingListButton" width="74" height="74"/>
         <image name="ice-cream" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>

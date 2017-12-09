@@ -57,6 +57,8 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var audioPlayer = AVAudioPlayer()
     
+    var activeField: UITextField?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -798,7 +800,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
         } else {}
     }
-    
+
     //Final declaration:
     
 }
