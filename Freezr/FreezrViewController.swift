@@ -298,15 +298,25 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let item = self.items[indexPath.row]
             
             //Some setup for notifcation deletion.
-            let identifer = item.notifid
+            let identifier = item.notifid
             let twoWeekIdentifier = item.twoweeknotifid
             let oneWeekIdentifier = item.oneweeknotifid
             let twoDayIdentifier = item.twodaynotifid
             
-            print("delete:: \(identifer!)")
+            //This is here to catch the 1.3.2 transition.
+            
+            if item.notifid != nil {
+            print("delete:: \(identifier!)")
+            }
+            if item.twoweeknotifid != nil {
             print("two week delete:: \(twoWeekIdentifier!)")
+            }
+            if item.oneweeknotifid != nil {
             print("one week delete:: \(oneWeekIdentifier!)")
+            }
+            if item.twodaynotifid != nil {
             print("two day delete:: \(twoDayIdentifier!)")
+            }
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             context.delete(item)
@@ -316,7 +326,11 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
             UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
                 var identifiers: [String] = []
                 for notification:UNNotificationRequest in notificationRequests {
-                    if notification.identifier == "\(identifer!)" {
+                    
+                    //This is here to catch the 1.3.2 transition.
+                    if identifier != nil {
+                        
+                    if notification.identifier == "\(identifier!)" {
                         identifiers.append(notification.identifier)
                     } else if notification.identifier == "\(twoWeekIdentifier!)" {
                         identifiers.append(notification.identifier)
@@ -328,6 +342,7 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         identifiers.append(notification.identifier)
                         
                     }
+                }
                 }
                 UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
             }

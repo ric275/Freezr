@@ -79,50 +79,50 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         //If there is an existing item:
         
-    
+        
         if item != nil {
             
-                itemImage.image = UIImage(data: item!.image! as Data)
-                itemName.text = item!.name
-                expirationDateTextField.text = item!.expirydate
+            itemImage.image = UIImage(data: item!.image! as Data)
+            itemName.text = item!.name
+            expirationDateTextField.text = item!.expirydate
+            
+            placeHolderText1.isHidden = true
+            placeHolderText2.isHidden = true
+            imageNoticeText.isHidden = true
+            
+            addItemOrUpdateButton.setTitle("Update item", for: .normal)
+            
+            //Expiry text setup.
+            
+            // Convert the String to a NSDate.
+            
+            let dateString = expirationDateTextField.text
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MMM/yyyy"
+            let dateFromString = dateFormatter.date(from: dateString!)
+            let twoWeeks = dateFromString?.addingTimeInterval(-1209600)
+            
+            //Change expiry text and colour accordingly.
+            
+            if (item?.expirydate?.isEmpty)! {
                 
-                placeHolderText1.isHidden = true
-                placeHolderText2.isHidden = true
-                imageNoticeText.isHidden = true
+                print("No expiry date given - do nothing")
                 
-                addItemOrUpdateButton.setTitle("Update item", for: .normal)
+            } else {
                 
-                //Expiry text setup.
-                
-                // Convert the String to a NSDate.
-                
-                let dateString = expirationDateTextField.text
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "dd/MMM/yyyy"
-                let dateFromString = dateFormatter.date(from: dateString!)
-                let twoWeeks = dateFromString?.addingTimeInterval(-1209600)
-                
-                //Change expiry text and colour accordingly.
-                
-                if (item?.expirydate?.isEmpty)! {
+                if today.isGreaterThanDate(dateToCompare: dateFromString!) {
+                    expirationDateTextField.textColor = .red
+                    expiresLabel.text = "Expired:"
+                    expiresLabel.textColor = .red
                     
-                    print("No expiry date given - do nothing")
+                } else if today.isGreaterThanDate(dateToCompare: twoWeeks!) {
+                    expirationDateTextField.textColor = .orange
+                    expiresLabel.text = "Expiring soon:"
+                    expiresLabel.textColor = .orange
                     
-                } else {
-                    
-                    if today.isGreaterThanDate(dateToCompare: dateFromString!) {
-                        expirationDateTextField.textColor = .red
-                        expiresLabel.text = "Expired:"
-                        expiresLabel.textColor = .red
-                        
-                    } else if today.isGreaterThanDate(dateToCompare: twoWeeks!) {
-                        expirationDateTextField.textColor = .orange
-                        expiresLabel.text = "Expiring soon:"
-                        expiresLabel.textColor = .orange
-                        
-                    } else {}
-                    
-                }
+                } else {}
+                
+            }
             
             
             //If there is not an existing item:
@@ -185,7 +185,16 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             item!.image = UIImageJPEGRepresentation(itemImage.image!, 0.05)! as Data?
             item?.expirydate = expirationDateTextField.text
             
-            //If an expiry date is selected, schedule a new notification with the same notifID to overwrite the old one.
+            //Okay this is confusing - what this does is, when hitting update, it will create a notifID ONLY if there isn't already one. This should ONLY ever happen after the 1.3.1 > 1.3.2 transition.
+            
+            if item?.notifid == nil {
+                item?.notifid = "\(today)"
+                item?.twoweeknotifid = "\(today)" + "2week"
+                item?.oneweeknotifid = "\(today)" + "1week"
+                item?.twodaynotifid = "\(today)" + "2day"
+            }
+            
+            //If a *new* expiry date is selected, schedule a new notification with the same notifID to overwrite the old one.
             
             if selectedDate != nil {
                 
@@ -215,7 +224,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             item.name = itemName.text
             item.image = UIImageJPEGRepresentation(itemImage.image!, 0.05)! as Data? //was 0.1
             item.expirydate = expirationDateTextField.text
-            item.notifid = today as Date
+            item.notifid = "\(today)"
             item.twoweeknotifid = "\(today)" + "2week"
             item.oneweeknotifid = "\(today)" + "1week"
             item.twodaynotifid = "\(today)" + "2day"
@@ -224,7 +233,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             print("2 WEEK NOTIFID::\(item.twoweeknotifid!)")
             print("1 WEEK NOTIFID::\(item.oneweeknotifid!)")
             print("2 DAY NOTIFID::\(item.twodaynotifid!)")
- 
+            
             //(UIApplication.shared.delegate as! AppDelegate).saveContext()
             
             //If an expiry date is selected, schedule a notification with the current date as the identifier.
@@ -261,33 +270,33 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         //Set up sound playback
         
         do {
-        try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
         } catch {
             print("sound error1")
         }
         
         do {
-        try AVAudioSession.sharedInstance().setActive(true)
+            try AVAudioSession.sharedInstance().setActive(true)
         } catch {
-        print("sound error2")
+            print("sound error2")
         }
         
         //Play sound
         
         if UserDefaults.standard.bool(forKey: "soundSwitchOn") == false {
             
-        do {
-           try audioPlayer = AVAudioPlayer(contentsOf: alertSound as URL)
-        } catch {
-            print("Playback error")
-        }
-        
-        audioPlayer.volume = 0.07
-        audioPlayer.prepareToPlay()
-        audioPlayer.play()
+            do {
+                try audioPlayer = AVAudioPlayer(contentsOf: alertSound as URL)
+            } catch {
+                print("Playback error")
+            }
+            
+            audioPlayer.volume = 0.07
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
             
         } else {
-        print("sounds off")
+            print("sounds off")
         }
         
         navigationController!.popViewController(animated: true)
@@ -299,15 +308,25 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let identifer = item?.notifid
+        let identifier = item?.notifid
         let twoWeekIdentifier = item?.twoweeknotifid
         let oneWeekIdentifier = item?.oneweeknotifid
         let twoDayIdentifier = item?.twodaynotifid
         
-        print("delete:: \(identifer!)")
-        print("two week delete:: \(twoWeekIdentifier!)")
-        print("one week delete:: \(oneWeekIdentifier!)")
-        print("two day delete:: \(twoDayIdentifier!)")
+        //This is here to catch the 1.3.2 transition.
+        
+        if item?.notifid != nil {
+            print("delete:: \(identifier!)")
+        }
+        if item?.twoweeknotifid != nil {
+            print("two week delete:: \(twoWeekIdentifier!)")
+        }
+        if item?.oneweeknotifid != nil {
+            print("one week delete:: \(oneWeekIdentifier!)")
+        }
+        if item?.twodaynotifid != nil {
+            print("two day delete:: \(twoDayIdentifier!)")
+        }
         
         context.delete(item!)
         
@@ -316,18 +335,23 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
             var identifiers: [String] = []
             for notification:UNNotificationRequest in notificationRequests {
-                if notification.identifier == "\(identifer!)" {
-                    identifiers.append(notification.identifier)
+                
+                //This is here to catch the 1.3.2 transition.
+                if identifier != nil {
                     
-                } else if notification.identifier == "\(twoWeekIdentifier!)" {
-                    identifiers.append(notification.identifier)
-                    
-                } else if notification.identifier == "\(oneWeekIdentifier!)" {
-                    identifiers.append(notification.identifier)
-                    
-                } else if notification.identifier == "\(twoDayIdentifier!)" {
-                    identifiers.append(notification.identifier)
-                    
+                    if notification.identifier == "\(identifier!)" {
+                        identifiers.append(notification.identifier)
+                        
+                    } else if notification.identifier == "\(twoWeekIdentifier!)" {
+                        identifiers.append(notification.identifier)
+                        
+                    } else if notification.identifier == "\(oneWeekIdentifier!)" {
+                        identifiers.append(notification.identifier)
+                        
+                    } else if notification.identifier == "\(twoDayIdentifier!)" {
+                        identifiers.append(notification.identifier)
+                        
+                    }
                 }
             }
             UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
@@ -502,7 +526,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @objc func imageTapped() {
         if itemImage.image != nil {
-        performSegue(withIdentifier: "freezrBigPictureSegue", sender: nil)
+            performSegue(withIdentifier: "freezrBigPictureSegue", sender: nil)
         }
     }
     
@@ -577,7 +601,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 content.body = "\(itemName.text!) (in your freezer) will expire in 2 weeks."
             }
             content.sound = UNNotificationSound.init(named: "notifSound.mp3")
-
+            
             let identifier = NSString.localizedUserNotificationString(forKey: "\(String(describing: today))" + "2week", arguments: nil)
             
             print("2 week Scheduled with::\(identifier)")
@@ -800,7 +824,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
         } else {}
     }
-
+    
     //Final declaration:
     
 }

@@ -175,7 +175,16 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
             fridgeItem!.image = UIImageJPEGRepresentation(fridgeItemImage.image!, 0.05)! as Data?
             fridgeItem?.expirydate = expirationDateTextField.text
             
-            //If an expiry date is selected, schedule a new notification with the same notifID to overwrite the old one.
+            //Okay this is confusing - what this does is, when hitting update, it will create a notifID ONLY if there isn't already one. This should ONLY ever happen after the 1.3.1 > 1.3.2 transition.
+            
+            if fridgeItem?.notifid == nil {
+                fridgeItem?.notifid = "\(today)"
+                fridgeItem?.twoweeknotifid = "\(today)" + "2week"
+                fridgeItem?.oneweeknotifid = "\(today)" + "1week"
+                fridgeItem?.twodaynotifid = "\(today)" + "2day"
+            }
+            
+            //If a *new* expiry date is selected, schedule a new notification with the same notifID to overwrite the old one.
             if selectedDate != nil {
                 
                 if UserDefaults.standard.bool(forKey: "fridgeSwitchOn") == true {
@@ -185,16 +194,16 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
                 if UserDefaults.standard.bool(forKey: "preFreq2WeekTicked") == true {
                     self.updatePre2WeekNotification(at: self.twoWeeks!)
                 }
-
+                
                 if UserDefaults.standard.bool(forKey: "preFreq1WeekTicked") == true {
                     self.updatePre1WeekNotification(at: oneWeek!)
                 }
-
+                
                 if UserDefaults.standard.bool(forKey: "preFreq2DayTicked") == true {
                     self.updatePre2DayNotification(at: twoDays!)
                 }
             }
-
+            
             
             //If creating a new item.
             
@@ -205,7 +214,7 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
             item.name = fridgeItemName.text
             item.image = UIImageJPEGRepresentation(fridgeItemImage.image!, 0.05)! as Data? //was 0.1
             item.expirydate = expirationDateTextField.text
-            item.notifid = today as Date
+            item.notifid = "\(today)"
             item.twoweeknotifid = "\(today)" + "2week"
             item.oneweeknotifid = "\(today)" + "1week"
             item.twodaynotifid = "\(today)" + "2day"
@@ -287,15 +296,25 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let identifer = fridgeItem?.notifid
+        let identifier = fridgeItem?.notifid
         let twoWeekIdentifier = fridgeItem?.twoweeknotifid
         let oneWeekIdentifier = fridgeItem?.oneweeknotifid
         let twoDayIdentifier = fridgeItem?.twodaynotifid
         
-        print("delete:: \(identifer!)")
-        print("two week delete:: \(twoWeekIdentifier!)")
-        print("one week delete:: \(oneWeekIdentifier!)")
-        print("two day delete:: \(twoDayIdentifier!)")
+        //This is here to catch the 1.3.2 transition.
+        
+        if fridgeItem?.notifid != nil {
+            print("delete:: \(identifier!)")
+        }
+        if fridgeItem?.twoweeknotifid != nil {
+            print("two week delete:: \(twoWeekIdentifier!)")
+        }
+        if fridgeItem?.oneweeknotifid != nil {
+            print("one week delete:: \(oneWeekIdentifier!)")
+        }
+        if fridgeItem?.twodaynotifid != nil {
+            print("two day delete:: \(twoDayIdentifier!)")
+        }
         
         context.delete(fridgeItem!)
         
@@ -304,23 +323,28 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
         UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
             var identifiers: [String] = []
             for notification:UNNotificationRequest in notificationRequests {
-                if notification.identifier == "\(identifer!)" {
-                    identifiers.append(notification.identifier)
-                    
-                } else if notification.identifier == "\(twoWeekIdentifier!)" {
-                    identifiers.append(notification.identifier)
                 
-                } else if notification.identifier == "\(oneWeekIdentifier!)" {
-                    identifiers.append(notification.identifier)
+                //This is here to catch the 1.3.2 transition.
+                if identifier != nil {
                     
-                } else if notification.identifier == "\(twoDayIdentifier!)" {
-                    identifiers.append(notification.identifier)
-                    
+                    if notification.identifier == "\(identifier!)" {
+                        identifiers.append(notification.identifier)
+                        
+                    } else if notification.identifier == "\(twoWeekIdentifier!)" {
+                        identifiers.append(notification.identifier)
+                        
+                    } else if notification.identifier == "\(oneWeekIdentifier!)" {
+                        identifiers.append(notification.identifier)
+                        
+                    } else if notification.identifier == "\(twoDayIdentifier!)" {
+                        identifiers.append(notification.identifier)
+                        
+                    }
                 }
             }
             UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
         }
-    
+        
         
         //SOUNDS
         
@@ -784,7 +808,7 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
             }
         } else {}
     }
- 
+    
     //Final declaration:
     
 }

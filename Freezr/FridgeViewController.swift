@@ -41,7 +41,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         } else {
             // Fallback on earlier versions
         }
-
+        
     }
     
     //Custom colours.
@@ -50,8 +50,8 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewWillAppear(_ animated: Bool) {
         
-         //Retrieve the FridgeItems from CoreData.
-      
+        //Retrieve the FridgeItems from CoreData.
+        
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         do {
@@ -154,10 +154,10 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "fridgeItemSegue" {
-       
-        let nextViewController = segue.destination as! FridgeItemViewController
-        nextViewController.fridgeItem = sender as? FridgeItem
-        
+            
+            let nextViewController = segue.destination as! FridgeItemViewController
+            nextViewController.fridgeItem = sender as? FridgeItem
+            
             if nextViewController.fridgeItem != nil {
                 
                 let backButton = UIBarButtonItem()
@@ -300,15 +300,25 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let fridgeItem = self.fridgeItems[indexPath.row]
             
             //Some setup for notifcation deletion.
-            let identifer = fridgeItem.notifid
+            let identifier = fridgeItem.notifid
             let twoWeekIdentifier = fridgeItem.twoweeknotifid
             let oneWeekIdentifier = fridgeItem.oneweeknotifid
             let twoDayIdentifier = fridgeItem.twodaynotifid
             
-            print("delete:: \(identifer!)")
-            print("two week delete:: \(twoWeekIdentifier!)")
-            print("one week delete:: \(oneWeekIdentifier!)")
-            print("two day delete:: \(twoDayIdentifier!)")
+            //This is here to catch the 1.3.2 transition.
+            
+            if fridgeItem.notifid != nil {
+                print("delete:: \(identifier!)")
+            }
+            if fridgeItem.twoweeknotifid != nil {
+                print("two week delete:: \(twoWeekIdentifier!)")
+            }
+            if fridgeItem.oneweeknotifid != nil {
+                print("one week delete:: \(oneWeekIdentifier!)")
+            }
+            if fridgeItem.twodaynotifid != nil {
+                print("two day delete:: \(twoDayIdentifier!)")
+            }
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             context.delete(fridgeItem)
@@ -318,17 +328,23 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
                 var identifiers: [String] = []
                 for notification:UNNotificationRequest in notificationRequests {
-                    if notification.identifier == "\(identifer!)" {
-                        identifiers.append(notification.identifier)
-                    } else if notification.identifier == "\(twoWeekIdentifier!)" {
-                        identifiers.append(notification.identifier)
+                    
+                    //This is here to catch the 1.3.2 transition.
+                    if identifier != nil {
                         
-                    } else if notification.identifier == "\(oneWeekIdentifier!)" {
-                        identifiers.append(notification.identifier)
-                        
-                    } else if notification.identifier == "\(twoDayIdentifier!)" {
-                        identifiers.append(notification.identifier)
-                        
+                        if notification.identifier == "\(identifier!)" {
+                            identifiers.append(notification.identifier)
+                            
+                        } else if notification.identifier == "\(twoWeekIdentifier!)" {
+                            identifiers.append(notification.identifier)
+                            
+                        } else if notification.identifier == "\(oneWeekIdentifier!)" {
+                            identifiers.append(notification.identifier)
+                            
+                        } else if notification.identifier == "\(twoDayIdentifier!)" {
+                            identifiers.append(notification.identifier)
+                            
+                        }
                     }
                 }
                 UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)

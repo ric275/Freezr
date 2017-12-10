@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13528" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17B1003" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="FridgeItem" representedClassName="FridgeItem" syncable="YES" codeGenerationType="class">
         <attribute name="expirydate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notifid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oneweeknotifid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twodaynotifid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twoweeknotifid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="expirydate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notifid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oneweeknotifid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="quantity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twodaynotifid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twoweeknotifid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="ShoppingListItem" representedClassName="ShoppingListItem" syncable="YES" codeGenerationType="class">
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -18,8 +25,8 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="FridgeItem" positionX="-63" positionY="18" width="128" height="105"/>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="FridgeItem" positionX="-63" positionY="18" width="128" height="150"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="165"/>
         <element name="ShoppingListItem" positionX="-63" positionY="9" width="128" height="90"/>
     </elements>
 </model>

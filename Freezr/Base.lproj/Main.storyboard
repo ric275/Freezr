@@ -283,7 +283,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHx-Wc-0uh">
-                                <rect key="frame" x="135.66666666666666" y="513" width="103" height="32"/>
+                                <rect key="frame" x="135.66666666666666" y="517" width="103" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Delete item">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -300,7 +300,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-YZ-Spl">
-                                <rect key="frame" x="100.66666666666669" y="473" width="174" height="32"/>
+                                <rect key="frame" x="100.66666666666669" y="477" width="174" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Add item to shopping list">
                                     <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
@@ -310,15 +310,13 @@
                                     <action selector="addToSLTapped:" destination="L68-X7-ABi" eventType="touchUpInside" id="Wpd-J1-d0k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFK-tj-ygG">
-                                <rect key="frame" x="118.66666666666669" y="436" width="138" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv1-RZ-CXS">
+                                <rect key="frame" x="118" y="440" width="138" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="Add item to freezer">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" title="Add item to freezer"/>
                                 <connections>
-                                    <action selector="addToFreezerTapped:" destination="L68-X7-ABi" eventType="touchUpInside" id="S43-Xy-524"/>
-                                    <action selector="addToFridgeTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="izD-CX-mEl"/>
+                                    <action selector="addToFreezerTapped:" destination="L68-X7-ABi" eventType="touchUpInside" id="iSs-C5-f43"/>
+                                    <action selector="addToFridgeTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="Eg2-fR-Jjk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -328,26 +326,26 @@
                             <constraint firstItem="S6k-Fu-edo" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="4do-qe-Pj5"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="top" secondItem="NDl-H8-uue" secondAttribute="bottom" constant="2" id="DUn-X6-q1u"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="Ftc-hm-kcn"/>
+                            <constraint firstItem="hv1-RZ-CXS" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="H8b-bs-yTc"/>
                             <constraint firstItem="NDl-H8-uue" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="JOi-fu-ZLo"/>
                             <constraint firstItem="jHx-Wc-0uh" firstAttribute="top" secondItem="ZEy-YZ-Spl" secondAttribute="bottom" constant="8" id="JZe-7M-aaU"/>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="LhD-7S-uhT"/>
                             <constraint firstItem="7wE-fg-BPV" firstAttribute="top" secondItem="dlb-8f-5Lo" secondAttribute="bottom" constant="20" id="Lm6-Cm-TFd"/>
-                            <constraint firstItem="gKi-NB-IFu" firstAttribute="top" secondItem="VFK-tj-ygG" secondAttribute="bottom" constant="7" id="Pij-CV-RZw"/>
                             <constraint firstItem="McK-js-lft" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="QT2-pM-bFP"/>
                             <constraint firstItem="7wE-fg-BPV" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="QhK-zg-lhI"/>
-                            <constraint firstItem="VFK-tj-ygG" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="RHd-qV-rvv"/>
                             <constraint firstItem="mQP-c0-GzI" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="Ry8-bh-z5X"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="width" secondItem="7wE-fg-BPV" secondAttribute="width" id="T5k-Md-HiX"/>
                             <constraint firstItem="gKi-NB-IFu" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="WsK-7e-132"/>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="top" secondItem="5rx-kh-Ue2" secondAttribute="bottom" constant="30" id="bw9-JR-4Fz"/>
-                            <constraint firstItem="ZEy-YZ-Spl" firstAttribute="top" secondItem="VFK-tj-ygG" secondAttribute="bottom" constant="5" id="cFf-z5-8Kz"/>
+                            <constraint firstItem="hv1-RZ-CXS" firstAttribute="top" secondItem="uI7-d4-1Uz" secondAttribute="bottom" constant="12" id="dCJ-hd-DMS"/>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="width" secondItem="5rx-kh-Ue2" secondAttribute="width" id="dtH-OV-gEF"/>
                             <constraint firstItem="jHx-Wc-0uh" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="f5U-3Z-YRp"/>
+                            <constraint firstItem="gKi-NB-IFu" firstAttribute="top" secondItem="hv1-RZ-CXS" secondAttribute="bottom" constant="3" id="kQT-iY-iky"/>
                             <constraint firstItem="ZEy-YZ-Spl" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="ndu-PX-bke"/>
-                            <constraint firstItem="VFK-tj-ygG" firstAttribute="top" secondItem="uI7-d4-1Uz" secondAttribute="bottom" constant="8" id="nhP-X1-ei2"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="top" secondItem="7wE-fg-BPV" secondAttribute="bottom" constant="30" id="omB-gL-RAm"/>
                             <constraint firstItem="mQP-c0-GzI" firstAttribute="top" secondItem="McK-js-lft" secondAttribute="bottom" constant="8" id="ozZ-iA-H6h"/>
                             <constraint firstItem="McK-js-lft" firstAttribute="top" secondItem="dlb-8f-5Lo" secondAttribute="bottom" constant="80" id="s7s-9J-I8K"/>
+                            <constraint firstItem="ZEy-YZ-Spl" firstAttribute="top" secondItem="hv1-RZ-CXS" secondAttribute="bottom" constant="5" id="vli-YI-bhs"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -367,7 +365,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addItemOrUpdateButton" destination="VFK-tj-ygG" id="XZo-vX-xRa"/>
+                        <outlet property="addItemOrUpdateButton" destination="hv1-RZ-CXS" id="xQO-OG-RZN"/>
                         <outlet property="addToSLButton" destination="ZEy-YZ-Spl" id="zaX-lT-lew"/>
                         <outlet property="bck" destination="ZSs-Xm-hP9" id="jGb-4V-oSc"/>
                         <outlet property="deleteItemButton" destination="jHx-Wc-0uh" id="pIg-4P-euN"/>
@@ -1084,6 +1082,6 @@
         <image name="ice-cream" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IMp-m8-2bd"/>
+        <segue reference="3f9-Gu-2sZ"/>
     </inferredMetricsTieBreakers>
 </document>
