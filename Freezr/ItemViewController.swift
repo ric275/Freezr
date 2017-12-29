@@ -42,6 +42,8 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBOutlet var bck: UIView!
     
+    @IBOutlet weak var dateAddedLabel: UILabel!
+    
     //Variables.
     
     var imageSelector = UIImagePickerController()
@@ -92,6 +94,22 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             addItemOrUpdateButton.setTitle("Update item", for: .normal)
             
+            //Date added label.
+            
+            if item?.notifid != nil {
+                
+                let dateAdded = item?.notifid
+                
+                let dateFormatter2 = DateFormatter()
+                dateFormatter2.dateFormat = "yyyy-MM-dd hh:mm:ss Z"
+                let dateFromString2 = dateFormatter2.date(from: dateAdded!)
+                
+                print(dateAdded!)
+                print(dateFromString2)
+            
+                dateAddedLabel.text = "Date added: \(dateAdded!)"
+            }
+            
             //Expiry text setup.
             
             // Convert the String to a NSDate.
@@ -132,6 +150,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             deleteItemButton.isHidden = true
             addToSLButton.isHidden = true
             addItemOrUpdateButton.isEnabled = false
+            dateAddedLabel.isHidden = true
         }
         
         

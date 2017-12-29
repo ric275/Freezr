@@ -283,7 +283,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHx-Wc-0uh">
-                                <rect key="frame" x="135.66666666666666" y="517" width="103" height="32"/>
+                                <rect key="frame" x="136" y="517" width="103" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Delete item">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -311,7 +311,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv1-RZ-CXS">
-                                <rect key="frame" x="118" y="440" width="138" height="32"/>
+                                <rect key="frame" x="118.66666666666669" y="440" width="138" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Add item to freezer"/>
                                 <connections>
@@ -319,16 +319,22 @@
                                     <action selector="addToFridgeTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="Eg2-fR-Jjk"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date added to freezer: 27/12/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA1-1g-dsO">
+                                <rect key="frame" x="97.333333333333329" y="660.66666666666663" width="182.33333333333337" height="16.333333333333371"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="top" secondItem="S6k-Fu-edo" secondAttribute="bottom" constant="2" id="0Xz-RT-3jV"/>
+                            <constraint firstItem="tA1-1g-dsO" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="1JO-Ka-M1r"/>
                             <constraint firstItem="S6k-Fu-edo" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="4do-qe-Pj5"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="top" secondItem="NDl-H8-uue" secondAttribute="bottom" constant="2" id="DUn-X6-q1u"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="Ftc-hm-kcn"/>
                             <constraint firstItem="hv1-RZ-CXS" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="H8b-bs-yTc"/>
                             <constraint firstItem="NDl-H8-uue" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="JOi-fu-ZLo"/>
-                            <constraint firstItem="jHx-Wc-0uh" firstAttribute="top" secondItem="ZEy-YZ-Spl" secondAttribute="bottom" constant="8" id="JZe-7M-aaU"/>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="LhD-7S-uhT"/>
                             <constraint firstItem="7wE-fg-BPV" firstAttribute="top" secondItem="dlb-8f-5Lo" secondAttribute="bottom" constant="20" id="Lm6-Cm-TFd"/>
                             <constraint firstItem="McK-js-lft" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="QT2-pM-bFP"/>
@@ -338,8 +344,10 @@
                             <constraint firstItem="gKi-NB-IFu" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="WsK-7e-132"/>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="top" secondItem="5rx-kh-Ue2" secondAttribute="bottom" constant="30" id="bw9-JR-4Fz"/>
                             <constraint firstItem="hv1-RZ-CXS" firstAttribute="top" secondItem="uI7-d4-1Uz" secondAttribute="bottom" constant="12" id="dCJ-hd-DMS"/>
+                            <constraint firstItem="7k6-vA-6KD" firstAttribute="top" secondItem="jHx-Wc-0uh" secondAttribute="bottom" constant="136" id="ddA-Ca-Orj"/>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="width" secondItem="5rx-kh-Ue2" secondAttribute="width" id="dtH-OV-gEF"/>
                             <constraint firstItem="jHx-Wc-0uh" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="f5U-3Z-YRp"/>
+                            <constraint firstItem="7k6-vA-6KD" firstAttribute="top" secondItem="tA1-1g-dsO" secondAttribute="bottom" constant="8" id="k3G-C2-HLV"/>
                             <constraint firstItem="gKi-NB-IFu" firstAttribute="top" secondItem="hv1-RZ-CXS" secondAttribute="bottom" constant="3" id="kQT-iY-iky"/>
                             <constraint firstItem="ZEy-YZ-Spl" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="ndu-PX-bke"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="top" secondItem="7wE-fg-BPV" secondAttribute="bottom" constant="30" id="omB-gL-RAm"/>
@@ -368,6 +376,7 @@
                         <outlet property="addItemOrUpdateButton" destination="hv1-RZ-CXS" id="xQO-OG-RZN"/>
                         <outlet property="addToSLButton" destination="ZEy-YZ-Spl" id="zaX-lT-lew"/>
                         <outlet property="bck" destination="ZSs-Xm-hP9" id="jGb-4V-oSc"/>
+                        <outlet property="dateAddedLabel" destination="tA1-1g-dsO" id="ASK-Mx-18J"/>
                         <outlet property="deleteItemButton" destination="jHx-Wc-0uh" id="pIg-4P-euN"/>
                         <outlet property="expirationDateTextField" destination="uI7-d4-1Uz" id="eiH-KK-2Wg"/>
                         <outlet property="expiresLabel" destination="S6k-Fu-edo" id="uYM-5h-YRe"/>
