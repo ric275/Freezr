@@ -3,7 +3,7 @@
 //  Freezr
 //
 //  Created by Jack Taylor on 09/10/2016.
-//  Copyright © 2016-2017 Jack Taylor. All rights reserved.
+//  Copyright © 2016-2018 Jack Taylor. All rights reserved.
 //
 
 import UIKit
@@ -96,18 +96,17 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             //Date added label.
             
-            if item?.notifid != nil {
+            if item?.addeddate != nil {
                 
-               let dateAdded = item?.notifid
+                let labelFormatter = DateFormatter()
                 
-                let currentDateTime = Date()
-                let formatterz = DateFormatter()
+                labelFormatter.dateFormat = "MMM d, yyyy"
                 
-                formatterz.dateFormat = "dd.MM.yyyy"
-                
-                let dateString = formatterz.string(from: item!.notifid!)
+                let dateString = labelFormatter.string(from: (item?.addeddate)!)
                 
                 dateAddedLabel.text = "Date added: \(dateString)"
+            } else {
+                dateAddedLabel.isHidden = true
             }
             
             //Expiry text setup.
@@ -246,13 +245,15 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 let item = Item(context: context)
                 item.name = itemName.text
                 
-                let defaultImage = UIImage(named: "SLIcon")
+                let defaultImage = UIImage(named: "freezerTemp")
                 
                 if itemImage.image == nil {
                     item.image = UIImageJPEGRepresentation(defaultImage!, 0.05)! as Data?
                 } else {
                     item.image = UIImageJPEGRepresentation(itemImage.image!, 0.05)! as Data? //was 0.1
                 }
+                
+                item.addeddate = today as Date
                 
                 item.expirydate = expirationDateTextField.text
                 item.notifid = "\(today)"

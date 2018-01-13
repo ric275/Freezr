@@ -3,7 +3,7 @@
 //  Freezr
 //
 //  Created by Jack Taylor on 01/11/2016.
-//  Copyright © 2016-2017 Jack Taylor. All rights reserved.
+//  Copyright © 2016-2018 Jack Taylor. All rights reserved.
 //
 
 import UIKit
@@ -37,6 +37,8 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var imageNoticeText: UILabel!
     
     @IBOutlet weak var expiresLabel: UILabel!
+    
+    @IBOutlet weak var dateAddedLabel: UILabel!
     
     //Variables.
     
@@ -84,6 +86,21 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
             
             addItemOrUpdateButton.setTitle("Update item", for: .normal)
             
+            //Date added label.
+            
+            if fridgeItem?.addeddate != nil {
+                
+                let labelFormatter = DateFormatter()
+                
+                labelFormatter.dateFormat = "MMM d, yyyy"
+                
+                let dateString = labelFormatter.string(from: (fridgeItem?.addeddate)!)
+                
+                dateAddedLabel.text = "Date added: \(dateString)"
+            } else {
+                dateAddedLabel.isHidden = true
+            }
+            
             //Expiry text setup.
             
             // Convert the String to a NSDate.
@@ -123,6 +140,7 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
             
             deleteItemButton.isHidden = true
             addToSLButton.isHidden = true
+            dateAddedLabel.isHidden = true
             //addItemOrUpdateButton.isEnabled = false
         }
         
@@ -217,14 +235,16 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
             let item = FridgeItem(context: context)
             item.name = fridgeItemName.text
             
-            let defaultImage = UIImage(named: "SLIcon")
+            let defaultImage = UIImage(named: "fridgeTemp")
             
             if fridgeItemImage.image == nil {
                 item.image = UIImageJPEGRepresentation(defaultImage!, 0.05)! as Data?
             } else {
                 item.image = UIImageJPEGRepresentation(fridgeItemImage.image!, 0.05)! as Data? //was 0.1
             }
-            
+                
+            item.addeddate = today as Date
+
             item.expirydate = expirationDateTextField.text
             item.notifid = "\(today)"
             item.twoweeknotifid = "\(today)" + "2week"

@@ -3,7 +3,7 @@
 //  Freezr
 //
 //  Created by Jack Taylor on 30/11/2017.
-//  Copyright © 2017 Jack Taylor. All rights reserved.
+//  Copyright © 2017-2018 Jack Taylor. All rights reserved.
 //
 
 import UIKit
@@ -95,7 +95,7 @@ class AddToSLViewController: UIViewController, UIImagePickerControllerDelegate, 
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             
             let SLItem = ShoppingListItem(context: context)
-            let defaultImage = UIImage(named: "SLIcon")
+            let defaultImage = UIImage(named: "shoppingListTemp")
             SLItem.name = itemName.text
             SLItem.isChecked = false
             

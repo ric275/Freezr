@@ -3,7 +3,7 @@
 //  Freezr
 //
 //  Created by Jack Taylor on 01/11/2016.
-//  Copyright © 2016-2017 Jack Taylor. All rights reserved.
+//  Copyright © 2016-2018 Jack Taylor. All rights reserved.
 //
 
 import UIKit

@@ -319,8 +319,8 @@
                                     <action selector="addToFridgeTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="Eg2-fR-Jjk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date added to freezer: 27/12/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA1-1g-dsO">
-                                <rect key="frame" x="96.333333333333329" y="660.66666666666663" width="182.33333333333337" height="16.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date added: 27/12/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA1-1g-dsO">
+                                <rect key="frame" x="127" y="660.66666666666663" width="121.33333333333331" height="16.333333333333371"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
                                 <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -948,6 +948,12 @@
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date added: 27/12/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2f-m1-dv4">
+                                <rect key="frame" x="126.66666666666669" y="660" width="122" height="17"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -971,10 +977,12 @@
                             <constraint firstItem="WRK-uk-B20" firstAttribute="top" secondItem="LgM-bY-M30" secondAttribute="bottom" constant="80" id="apU-08-5fp"/>
                             <constraint firstItem="1sH-VX-jpu" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="d64-Wg-A5n"/>
                             <constraint firstItem="C2l-Jy-rqt" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="dOj-6x-S00"/>
+                            <constraint firstItem="B2f-m1-dv4" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="dcL-wI-LEg"/>
                             <constraint firstItem="HYZ-fs-2pJ" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="fGg-2v-hbm"/>
                             <constraint firstItem="dpe-4a-a4H" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="hvW-2g-rIF"/>
                             <constraint firstItem="UE1-CE-Jta" firstAttribute="width" secondItem="xi4-FQ-uoD" secondAttribute="width" id="kI2-l5-Bvt"/>
                             <constraint firstItem="dsg-FX-HGE" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="prD-vJ-kOw"/>
+                            <constraint firstItem="q2Z-H1-IyD" firstAttribute="top" secondItem="B2f-m1-dv4" secondAttribute="bottom" constant="8" id="vXQ-Pa-3iy"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -996,6 +1004,7 @@
                     <connections>
                         <outlet property="addItemOrUpdateButton" destination="3sz-If-CZI" id="VcS-Xx-qsR"/>
                         <outlet property="addToSLButton" destination="C2l-Jy-rqt" id="b26-yU-uB0"/>
+                        <outlet property="dateAddedLabel" destination="B2f-m1-dv4" id="kkp-1W-cN2"/>
                         <outlet property="deleteItemButton" destination="dsg-FX-HGE" id="tWf-8f-7wq"/>
                         <outlet property="expirationDateTextField" destination="UE1-CE-Jta" id="P4l-eS-DAE"/>
                         <outlet property="expiresLabel" destination="fGE-Eq-SB1" id="B0q-x7-sGE"/>
@@ -1009,7 +1018,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIN-Zb-s4i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2632.5" y="-1566.5492957746478"/>
+            <point key="canvasLocation" x="2631.1999999999998" y="-1567.2413793103449"/>
         </scene>
         <!--Fridge Image View Controller-->
         <scene sceneID="b6v-JJ-MhP">

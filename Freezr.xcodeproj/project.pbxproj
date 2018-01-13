@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		0404C12C1DCAA2690034DCA6 /* FridgeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeImageViewController.swift; sourceTree = "<group>"; };
 		0404C12E1DCAAC3E0034DCA6 /* FreezrImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezrImageViewController.swift; sourceTree = "<group>"; };
+		042D4A7B200A3B2F008A14C9 /* Freezr v3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Freezr v3.xcdatamodel"; sourceTree = "<group>"; };
 		0443A81B1DC65AD400B2A7A0 /* Freezr Demo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Freezr Demo.mp4"; sourceTree = "<group>"; };
 		04642E6A1DAFADBF002E7568 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		046732161DAAE6FA00EEC292 /* Freezr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freezr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -439,10 +440,11 @@
 		048AA3941FDCA2D40025730C /* Freezr.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				042D4A7B200A3B2F008A14C9 /* Freezr v3.xcdatamodel */,
 				048AA3971FDCA2FF0025730C /* Freezr v2.xcdatamodel */,
 				048AA3951FDCA2D40025730C /* Freezr.xcdatamodel */,
 			);
-			currentVersion = 048AA3971FDCA2FF0025730C /* Freezr v2.xcdatamodel */;
+			currentVersion = 042D4A7B200A3B2F008A14C9 /* Freezr v3.xcdatamodel */;
 			path = Freezr.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
