@@ -123,7 +123,7 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
             
             deleteItemButton.isHidden = true
             addToSLButton.isHidden = true
-            addItemOrUpdateButton.isEnabled = false
+            //addItemOrUpdateButton.isEnabled = false
         }
         
         //Dismiss the keyboard when tapped away (setup).
@@ -209,10 +209,22 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
             
         } else {
             
+            if (fridgeItemName.text?.isEmpty)! && (fridgeItemImage.image == nil) {
+                showTextErrorAlert()
+            } else {
+            
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             let item = FridgeItem(context: context)
             item.name = fridgeItemName.text
-            item.image = UIImageJPEGRepresentation(fridgeItemImage.image!, 0.05)! as Data? //was 0.1
+            
+            let defaultImage = UIImage(named: "SLIcon")
+            
+            if fridgeItemImage.image == nil {
+                item.image = UIImageJPEGRepresentation(defaultImage!, 0.05)! as Data?
+            } else {
+                item.image = UIImageJPEGRepresentation(fridgeItemImage.image!, 0.05)! as Data? //was 0.1
+            }
+            
             item.expirydate = expirationDateTextField.text
             item.notifid = "\(today)"
             item.twoweeknotifid = "\(today)" + "2week"
@@ -242,6 +254,7 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
                 
                 if UserDefaults.standard.bool(forKey: "preFreq2DayTicked") == true {
                     self.pre2DayNotification(at: twoDays!)
+                }
                 }
             }
         }
@@ -807,6 +820,15 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
                 }
             }
         } else {}
+    }
+    
+    //Setup empty text/image alert.
+    
+    func showTextErrorAlert() {
+        let sendMailErrorAlert = UIAlertController(title: "Hold on a second!", message: "You have to give the item a name or an image before adding it to your fridge!", preferredStyle: .alert)
+        let cont = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        sendMailErrorAlert.addAction(cont)
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
     }
     
     //Final declaration:

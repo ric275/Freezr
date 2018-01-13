@@ -98,16 +98,16 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             if item?.notifid != nil {
                 
-                let dateAdded = item?.notifid
+               let dateAdded = item?.notifid
                 
-                let dateFormatter2 = DateFormatter()
-                dateFormatter2.dateFormat = "yyyy-MM-dd hh:mm:ss Z"
-                let dateFromString2 = dateFormatter2.date(from: dateAdded!)
+                let currentDateTime = Date()
+                let formatterz = DateFormatter()
                 
-                print(dateAdded!)
-                print(dateFromString2)
-            
-                dateAddedLabel.text = "Date added: \(dateAdded!)"
+                formatterz.dateFormat = "dd.MM.yyyy"
+                
+                let dateString = formatterz.string(from: item!.notifid!)
+                
+                dateAddedLabel.text = "Date added: \(dateString)"
             }
             
             //Expiry text setup.
@@ -149,7 +149,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             deleteItemButton.isHidden = true
             addToSLButton.isHidden = true
-            addItemOrUpdateButton.isEnabled = false
+            //addItemOrUpdateButton.isEnabled = false
             dateAddedLabel.isHidden = true
         }
         
@@ -238,41 +238,54 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
         } else {
             
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let item = Item(context: context)
-            item.name = itemName.text
-            item.image = UIImageJPEGRepresentation(itemImage.image!, 0.05)! as Data? //was 0.1
-            item.expirydate = expirationDateTextField.text
-            item.notifid = "\(today)"
-            item.twoweeknotifid = "\(today)" + "2week"
-            item.oneweeknotifid = "\(today)" + "1week"
-            item.twodaynotifid = "\(today)" + "2day"
-            
-            print("NOTIFID::\(item.notifid!)")
-            print("2 WEEK NOTIFID::\(item.twoweeknotifid!)")
-            print("1 WEEK NOTIFID::\(item.oneweeknotifid!)")
-            print("2 DAY NOTIFID::\(item.twodaynotifid!)")
-            
-            //(UIApplication.shared.delegate as! AppDelegate).saveContext()
-            
-            //If an expiry date is selected, schedule a notification with the current date as the identifier.
-            
-            if selectedDate != nil {
+            if (itemName.text?.isEmpty)! && (itemImage.image == nil) {
+                showTextErrorAlert()
+            } else {
                 
-                if UserDefaults.standard.bool(forKey: "freezerSwitchOn") == true {
-                    self.scheduleNotification(at: self.selectedDate!)
+                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                let item = Item(context: context)
+                item.name = itemName.text
+                
+                let defaultImage = UIImage(named: "SLIcon")
+                
+                if itemImage.image == nil {
+                    item.image = UIImageJPEGRepresentation(defaultImage!, 0.05)! as Data?
+                } else {
+                    item.image = UIImageJPEGRepresentation(itemImage.image!, 0.05)! as Data? //was 0.1
                 }
                 
-                if UserDefaults.standard.bool(forKey: "preFreq2WeekTicked") == true {
-                    self.pre2WeekNotification(at: self.twoWeeks!)
-                }
+                item.expirydate = expirationDateTextField.text
+                item.notifid = "\(today)"
+                item.twoweeknotifid = "\(today)" + "2week"
+                item.oneweeknotifid = "\(today)" + "1week"
+                item.twodaynotifid = "\(today)" + "2day"
                 
-                if UserDefaults.standard.bool(forKey: "preFreq1WeekTicked") == true {
-                    self.pre1WeekNotification(at: oneWeek!)
-                }
+                print("NOTIFID::\(item.notifid!)")
+                print("2 WEEK NOTIFID::\(item.twoweeknotifid!)")
+                print("1 WEEK NOTIFID::\(item.oneweeknotifid!)")
+                print("2 DAY NOTIFID::\(item.twodaynotifid!)")
                 
-                if UserDefaults.standard.bool(forKey: "preFreq2DayTicked") == true {
-                    self.pre2DayNotification(at: twoDays!)
+                //(UIApplication.shared.delegate as! AppDelegate).saveContext()
+                
+                //If an expiry date is selected, schedule a notification with the current date as the identifier.
+                
+                if selectedDate != nil {
+                    
+                    if UserDefaults.standard.bool(forKey: "freezerSwitchOn") == true {
+                        self.scheduleNotification(at: self.selectedDate!)
+                    }
+                    
+                    if UserDefaults.standard.bool(forKey: "preFreq2WeekTicked") == true {
+                        self.pre2WeekNotification(at: self.twoWeeks!)
+                    }
+                    
+                    if UserDefaults.standard.bool(forKey: "preFreq1WeekTicked") == true {
+                        self.pre1WeekNotification(at: oneWeek!)
+                    }
+                    
+                    if UserDefaults.standard.bool(forKey: "preFreq2DayTicked") == true {
+                        self.pre2DayNotification(at: twoDays!)
+                    }
                 }
             }
             
@@ -842,6 +855,15 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 }
             }
         } else {}
+    }
+    
+    //Setup empty text/image alert.
+    
+    func showTextErrorAlert() {
+        let sendMailErrorAlert = UIAlertController(title: "Hold on a second!", message: "You have to give the item a name or an image before adding it to your freezer!", preferredStyle: .alert)
+        let cont = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        sendMailErrorAlert.addAction(cont)
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
     }
     
     //Final declaration:
