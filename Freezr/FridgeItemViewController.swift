@@ -235,7 +235,7 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
             let item = FridgeItem(context: context)
             item.name = fridgeItemName.text
             
-            let defaultImage = UIImage(named: "fridgeTemp")
+            let defaultImage = UIImage(named: "freezerTemp")
             
             if fridgeItemImage.image == nil {
                 item.image = UIImageJPEGRepresentation(defaultImage!, 0.05)! as Data?
@@ -283,9 +283,11 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
         
         //SOUNDS
         
-        //Create the alert sound
+        //Create the alert sounds
         
         let alertSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "addSound", ofType: "mp3")!)
+        
+        let alertSound2 = NSURL(fileURLWithPath: Bundle.main.path(forResource: "deleteSound", ofType: "mp3")!)
         
         //Set up sound playback
         
@@ -304,7 +306,22 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
         //Play sound
         
         if UserDefaults.standard.bool(forKey: "soundSwitchOn") == false {
-            
+           
+            if (fridgeItemName.text?.isEmpty)! && (fridgeItemImage.image == nil) {
+                
+                do {
+                    try audioPlayer = AVAudioPlayer(contentsOf: alertSound2 as URL)
+                } catch {
+                    print("Playback error")
+                }
+                
+                audioPlayer.volume = 0.07
+                audioPlayer.prepareToPlay()
+                audioPlayer.play()
+
+                
+            } else {
+                
             do {
                 try audioPlayer = AVAudioPlayer(contentsOf: alertSound as URL)
             } catch {
@@ -314,6 +331,7 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
             audioPlayer.volume = 0.07
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            }
             
         } else {
             print("sounds off")

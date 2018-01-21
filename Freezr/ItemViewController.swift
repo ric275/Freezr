@@ -300,6 +300,8 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         let alertSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "addSound", ofType: "mp3")!)
         
+        let alertSound2 = NSURL(fileURLWithPath: Bundle.main.path(forResource: "deleteSound", ofType: "mp3")!)
+        
         //Set up sound playback
         
         do {
@@ -318,6 +320,21 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         if UserDefaults.standard.bool(forKey: "soundSwitchOn") == false {
             
+            if (itemName.text?.isEmpty)! && (itemImage.image == nil) {
+                
+                do {
+                    try audioPlayer = AVAudioPlayer(contentsOf: alertSound2 as URL)
+                } catch {
+                    print("Playback error")
+                }
+                
+                audioPlayer.volume = 0.07
+                audioPlayer.prepareToPlay()
+                audioPlayer.play()
+                
+                
+            } else {
+            
             do {
                 try audioPlayer = AVAudioPlayer(contentsOf: alertSound as URL)
             } catch {
@@ -327,6 +344,8 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             audioPlayer.volume = 0.07
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+                
+            }
             
         } else {
             print("sounds off")
