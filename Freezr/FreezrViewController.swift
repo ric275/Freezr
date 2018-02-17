@@ -80,22 +80,22 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
         
         if items.count == 0 {
-            cell.textLabel?.text = "You should probably go buy food."
-            cell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
+            cell.itemNameLabel.text = "You should probably go buy food."
+            cell.itemNameLabel.font = UIFont(name: "Gill Sans", size: 17)
         } else {
             let item = items[indexPath.row]
-            cell.textLabel?.text = item.name
-            cell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
-            cell.detailTextLabel?.font = UIFont(name: "Gill Sans", size: 17)
-            cell.textLabel?.textColor = myPurple
-            cell.imageView?.image = UIImage(data: item.image! as Data)
+            cell.itemNameLabel.text = item.name
+            cell.itemNameLabel.font = UIFont(name: "GillSans-bold", size: 24)
+            cell.expiryDateLabel.font = UIFont(name: "Gill Sans", size: 21)
+            cell.itemNameLabel.textColor = myPurple
+            cell.itemImage.image = UIImage(data: item.image! as Data)
             
             if (item.expirydate?.isEmpty)! {
-                cell.textLabel?.textColor = myPurple
-                cell.detailTextLabel?.text = "Expires: Unknown"
+                cell.expiryDateLabel.textColor = myPurple
+                cell.expiryDateLabel.text = "Expires: Unknown"
                 
             } else {
                 
@@ -113,19 +113,19 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 //Change expiry text and colour accordingly.
                 
                 if today.isGreaterThanDate(dateToCompare: dateFromString!) {
-                    cell.textLabel?.textColor = .red
-                    cell.detailTextLabel?.text = "Expired: \(item.expirydate!)"
-                    cell.detailTextLabel?.textColor = .red
+                    cell.itemNameLabel.textColor = .red
+                    cell.expiryDateLabel.text = "Expired: \(item.expirydate!)"
+                    cell.expiryDateLabel.textColor = .red
                     
                 } else if today.isGreaterThanDate(dateToCompare: twoWeeks!) {
                     
-                    cell.detailTextLabel?.text = "Expires: \(item.expirydate!)"
-                    cell.detailTextLabel?.textColor = .orange
+                    cell.expiryDateLabel.text = "Expires: \(item.expirydate!)"
+                    cell.expiryDateLabel.textColor = .orange
                     
                 } else {
                     
-                    cell.detailTextLabel?.text = "Expires: \(item.expirydate!)"
-                    cell.detailTextLabel?.textColor = myPurple
+                    cell.expiryDateLabel.text = "Expires: \(item.expirydate!)"
+                    cell.expiryDateLabel.textColor = myPurple
                 }
             }
             

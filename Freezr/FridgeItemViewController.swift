@@ -158,11 +158,13 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func photosTapped(_ sender: AnyObject) {
         imageSelector.sourceType = .photoLibrary
+        imageSelector.allowsEditing = true
         present(imageSelector, animated: true, completion: nil)
     }
     
     @IBAction func cameraTapped(_ sender: AnyObject) {
         imageSelector.sourceType = .camera
+        imageSelector.allowsEditing = true
         present(imageSelector, animated: true, completion: nil)
     }
     

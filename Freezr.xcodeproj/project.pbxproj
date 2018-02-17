@@ -24,6 +24,7 @@
 		04EC76101E54D1AA0076E840 /* shoppingListSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04EC760F1E54D1AA0076E840 /* shoppingListSound.mp3 */; };
 		04EC76121E54D46E0076E840 /* deleteSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04EC76111E54D46E0076E840 /* deleteSound.mp3 */; };
 		04EC76141E54D7BD0076E840 /* notifSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04EC76131E54D7BD0076E840 /* notifSound.mp3 */; };
+		04F5531F201DEA2700C65A23 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5531E201DEA2700C65A23 /* ItemCell.swift */; };
 		04F61DBE1DC566930053E9B9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F61DBD1DC566930053E9B9 /* InfoViewController.swift */; };
 		04FC5AC01DC959A800440657 /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC5ABF1DC959A800440657 /* FridgeViewController.swift */; };
 		04FC5AC61DC9622700440657 /* FridgeItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC5AC51DC9622700440657 /* FridgeItemViewController.swift */; };
@@ -51,6 +52,7 @@
 		04EC760F1E54D1AA0076E840 /* shoppingListSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shoppingListSound.mp3; sourceTree = "<group>"; };
 		04EC76111E54D46E0076E840 /* deleteSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = deleteSound.mp3; sourceTree = "<group>"; };
 		04EC76131E54D7BD0076E840 /* notifSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = notifSound.mp3; sourceTree = "<group>"; };
+		04F5531E201DEA2700C65A23 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		04F61DBD1DC566930053E9B9 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		04FC5ABF1DC959A800440657 /* FridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
 		04FC5AC51DC9622700440657 /* FridgeItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeItemViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				046732191DAAE6FA00EEC292 /* AppDelegate.swift */,
+				04F5531E201DEA2700C65A23 /* ItemCell.swift */,
 				04FC5AC41DC95D3E00440657 /* Fridge */,
 				04FC5AC31DC95D3200440657 /* Freezr */,
 				04243D021FCEE0AB00D5F85E /* Shopping List */,
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F5531F201DEA2700C65A23 /* ItemCell.swift in Sources */,
 				046732311DAAF38500EEC292 /* ItemViewController.swift in Sources */,
 				0467321A1DAAE6FA00EEC292 /* AppDelegate.swift in Sources */,
 				0496E1EC1DB17CE20052E17B /* ShoppingListViewController.swift in Sources */,
