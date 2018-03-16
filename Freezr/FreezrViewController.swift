@@ -80,12 +80,20 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
         
         if items.count == 0 {
-            cell.itemNameLabel.text = "You should probably go buy food."
-            cell.itemNameLabel.font = UIFont(name: "Gill Sans", size: 17)
+            
+            let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
+
+            cell.textLabel?.text = "You should probably go buy food."
+            cell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
+            
+            return cell
+            
         } else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
+            
             let item = items[indexPath.row]
             cell.itemNameLabel.text = item.name
             cell.itemNameLabel.font = UIFont(name: "GillSans-bold", size: 24)
@@ -129,9 +137,10 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
             }
             
+            return cell
+            
         }
         
-        return cell
     }
 
 

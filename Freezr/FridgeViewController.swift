@@ -79,22 +79,29 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
-        
         if fridgeItems.count == 0 {
+            
+            let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
+            
             cell.textLabel?.text = "You should probably go buy food."
             cell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
+            
+            return cell
+            
         } else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FridgeItemCell", for: indexPath) as! FridgeItemCell
+            
             let fridgeItem = fridgeItems[indexPath.row]
-            cell.textLabel?.text = fridgeItem.name
-            cell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
-            cell.detailTextLabel?.font = UIFont(name: "Gill Sans", size: 17)
-            cell.textLabel?.textColor = myPurple
-            cell.imageView?.image = UIImage(data: fridgeItem.image! as Data)
+            cell.itemNameLabel?.text = fridgeItem.name
+            cell.itemNameLabel?.font = UIFont(name: "Gill Sans", size: 17)
+            cell.expiryDateLabel?.font = UIFont(name: "Gill Sans", size: 17)
+            cell.itemNameLabel?.textColor = myPurple
+            cell.itemImage?.image = UIImage(data: fridgeItem.image! as Data)
             
             if (fridgeItem.expirydate?.isEmpty)! {
-                cell.textLabel?.textColor = myPurple
-                cell.detailTextLabel?.text = "Expires: Unknown"
+                cell.expiryDateLabel?.textColor = myPurple
+                cell.expiryDateLabel?.text = "Expires: Unknown"
                 
             } else {
                 
@@ -129,9 +136,10 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
                 
             }
-        }
         
-        return cell
+            return cell
+            
+        }
     }
     
     //What happens when a cell is tapped.

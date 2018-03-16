@@ -33,7 +33,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         
         //Video setup.
         
-        let urlPathString:String? = Bundle.main.path(forResource: "Freezr Demo", ofType: "mp4")
+        let urlPathString:String? = Bundle.main.path(forResource: "Freezr Demo Opt", ofType: "mp4")
         
         if let urlPath = urlPathString {
             let fileURL = NSURL(fileURLWithPath: urlPath)
