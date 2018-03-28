@@ -70,7 +70,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         if section == 0 {
             return 1
         } else if section == 1 {
-            return 2
+            return 3
         } else if section == 2 {
             return 2
         } else if section == 3 {
@@ -97,6 +97,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         let preFreq1WeekCell = UITableViewCell(style: .value1, reuseIdentifier: nil)
         let preFreq2DayCell = UITableViewCell(style: .value1, reuseIdentifier: nil)
         let soundCell = UITableViewCell(style: .value1, reuseIdentifier: nil)
+        let websiteCell = UITableViewCell(style: .value1, reuseIdentifier: nil)
         
         
         howCell.textLabel?.text = "Video: How to use Freezr"
@@ -116,6 +117,11 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         feedbackCell.detailTextLabel?.textColor = myPurple
         feedbackCell.detailTextLabel?.font = UIFont(name: "Gill Sans", size: 17)
         feedbackCell.accessoryType =  .disclosureIndicator
+        
+        websiteCell.textLabel?.text = "Developer Website"
+        websiteCell.textLabel?.textColor = .purple
+        websiteCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
+        websiteCell.accessoryType =  .disclosureIndicator
         
         versionCell.textLabel?.text = "App Version:"
         versionCell.textLabel?.textColor = .purple
@@ -207,8 +213,10 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
                 return aboutCell
-            } else {
+            } else if indexPath.row == 1 {
                 return feedbackCell
+            } else {
+                return websiteCell
             }
         } else if indexPath.section == 2 {
             if indexPath.row == 0 {
@@ -242,7 +250,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         if indexPath.section == 1 {
             if indexPath.row == 0 {
                 performSegue(withIdentifier: "aboutSegue", sender: nil)
-            } else {
+            } else if indexPath.row == 1 {
                 
                 //What happens when the feedback cell is tapped - send the email.
                 
@@ -252,6 +260,14 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
                 } else {
                     self.showSendMailErrorAlert()
                 }
+            } else {
+                
+                //What happens when website cell is tapped - open blueinkcode.com
+                
+                let bicURL = URL(string: "https://blueinkcode.com")! as URL
+                
+                UIApplication.shared.open(bicURL, options: [:], completionHandler: nil)
+                
             }
             
         } else if indexPath.section == 0 {
