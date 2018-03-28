@@ -81,12 +81,12 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         if fridgeItems.count == 0 {
             
-            let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
+            let emptyCell = UITableViewCell(style: .value1, reuseIdentifier: nil)
             
-            cell.textLabel?.text = "You should probably go buy food."
-            cell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
+            emptyCell.textLabel?.text = "You should probably go buy food."
+            emptyCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
             
-            return cell
+            return emptyCell
             
         } else {
             
@@ -94,8 +94,8 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             let fridgeItem = fridgeItems[indexPath.row]
             cell.itemNameLabel?.text = fridgeItem.name
-            cell.itemNameLabel?.font = UIFont(name: "Gill Sans", size: 17)
-            cell.expiryDateLabel?.font = UIFont(name: "Gill Sans", size: 17)
+            cell.itemNameLabel.font = UIFont(name: "GillSans-bold", size: 24)
+            cell.expiryDateLabel.font = UIFont(name: "Gill Sans", size: 21)
             cell.itemNameLabel?.textColor = myPurple
             cell.itemImage?.image = UIImage(data: fridgeItem.image! as Data)
             
@@ -114,25 +114,24 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 dateFormatter.dateFormat = "dd/MMM/yyyy"
                 //dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
                 let dateFromString = dateFormatter.date(from: dateString!)
-                //Fridge is just one week, rather than two:
-                let oneWeek = dateFromString?.addingTimeInterval(-604800)
+                let twoWeeks = dateFromString?.addingTimeInterval(-1209600)
                 
                 //Change expiry text and colour accordingly.
                 
                 if today.isGreaterThanDate(dateToCompare: dateFromString!) {
-                    cell.textLabel?.textColor = .red
-                    cell.detailTextLabel?.text = "Expired: \(fridgeItem.expirydate!)"
-                    cell.detailTextLabel?.textColor = .red
+                    cell.itemNameLabel.textColor = .red
+                    cell.expiryDateLabel.text = "Expired: \(fridgeItem.expirydate!)"
+                    cell.expiryDateLabel.textColor = .red
                     
-                } else if today.isGreaterThanDate(dateToCompare: oneWeek!) {
+                } else if today.isGreaterThanDate(dateToCompare: twoWeeks!) {
                     
-                    cell.detailTextLabel?.text = "Expires: \(fridgeItem.expirydate!)"
-                    cell.detailTextLabel?.textColor = .orange
+                    cell.expiryDateLabel.text = "Expires: \(fridgeItem.expirydate!)"
+                    cell.expiryDateLabel.textColor = .orange
                     
                 } else {
                     
-                    cell.detailTextLabel?.text = "Expires: \(fridgeItem.expirydate!)"
-                    cell.detailTextLabel?.textColor = myPurple
+                    cell.expiryDateLabel.text = "Expires: \(fridgeItem.expirydate!)"
+                    cell.expiryDateLabel.textColor = myPurple
                 }
                 
             }
