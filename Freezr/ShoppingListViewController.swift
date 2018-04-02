@@ -74,28 +74,32 @@ class ShoppingListViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
-        
         if SLItems.count == 0 {
+            let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
+            
             cell.textLabel?.text = "Guess you bought everything ✔"
             
+            return cell
+            
         } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SLItemCell", for: indexPath) as! SLItemCell
+            
+            cell.itemName?.textColor = myPurple
+            cell.itemName?.font = UIFont(name: "Gill Sans", size: 20)
             
             let SLItem = SLItems[indexPath.row]
-            cell.textLabel?.text = SLItem.name
-            cell.imageView?.image = UIImage(data: SLItem.image! as Data)
+            cell.itemName?.text = SLItem.name
+            cell.itemImage?.image = UIImage(data: SLItem.image! as Data)
             
             if SLItem.isChecked {
                 cell.accessoryType = .checkmark
             } else {
                 cell.accessoryType = .none
             }
+            return cell
         }
         
-        cell.textLabel?.textColor = myPurple
-        cell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         
-        return cell
     }
     
     //What happens when a cell is tapped - tick/untick the items.

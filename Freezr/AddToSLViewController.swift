@@ -61,6 +61,7 @@ class AddToSLViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func photosTapped(_ sender: AnyObject) {
         imageSelector.sourceType = .photoLibrary
+        imageSelector.allowsEditing = true
         present(imageSelector, animated: true, completion: nil)
     }
     

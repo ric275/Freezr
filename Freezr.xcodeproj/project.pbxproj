@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0404C12D1DCAA2690034DCA6 /* FridgeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404C12C1DCAA2690034DCA6 /* FridgeImageViewController.swift */; };
 		0404C12F1DCAAC3E0034DCA6 /* FreezrImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404C12E1DCAAC3E0034DCA6 /* FreezrImageViewController.swift */; };
+		043C0CF120728B2200734189 /* SLItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0CF020728B2200734189 /* SLItemCell.swift */; };
 		04642E6B1DAFADBF002E7568 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642E6A1DAFADBF002E7568 /* AboutViewController.swift */; };
 		0467321A1DAAE6FA00EEC292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046732191DAAE6FA00EEC292 /* AppDelegate.swift */; };
 		0467321F1DAAE6FA00EEC292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467321D1DAAE6FA00EEC292 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		0404C12C1DCAA2690034DCA6 /* FridgeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeImageViewController.swift; sourceTree = "<group>"; };
 		0404C12E1DCAAC3E0034DCA6 /* FreezrImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezrImageViewController.swift; sourceTree = "<group>"; };
 		042D4A7B200A3B2F008A14C9 /* Freezr v3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Freezr v3.xcdatamodel"; sourceTree = "<group>"; };
+		043C0CF020728B2200734189 /* SLItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLItemCell.swift; sourceTree = "<group>"; };
 		04642E6A1DAFADBF002E7568 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		046732161DAAE6FA00EEC292 /* Freezr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freezr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046732191DAAE6FA00EEC292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				046732191DAAE6FA00EEC292 /* AppDelegate.swift */,
 				04F5531E201DEA2700C65A23 /* ItemCell.swift */,
 				047CD5D7205C47E400DA2BBD /* FridgeItemCell.swift */,
+				043C0CF020728B2200734189 /* SLItemCell.swift */,
 				04FC5AC41DC95D3E00440657 /* Fridge */,
 				04FC5AC31DC95D3200440657 /* Freezr */,
 				04243D021FCEE0AB00D5F85E /* Shopping List */,
@@ -249,6 +252,7 @@
 				04FC5AC61DC9622700440657 /* FridgeItemViewController.swift in Sources */,
 				04FC5AC01DC959A800440657 /* FridgeViewController.swift in Sources */,
 				04642E6B1DAFADBF002E7568 /* AboutViewController.swift in Sources */,
+				043C0CF120728B2200734189 /* SLItemCell.swift in Sources */,
 				0404C12F1DCAAC3E0034DCA6 /* FreezrImageViewController.swift in Sources */,
 				0404C12D1DCAA2690034DCA6 /* FridgeImageViewController.swift in Sources */,
 			);
