@@ -48,6 +48,8 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     let myPurple:UIColor = UIColor(red: 105/255.0, green: 94/255.0, blue: 133/255.0, alpha: 1.0)
     
+    let newPurple:UIColor = UIColor(red: 125/255.0, green: 80/255.0, blue: 230/255.0, alpha: 1.0)
+    
     override func viewWillAppear(_ animated: Bool) {
         
         //Retrieve the FridgeItems from CoreData.
@@ -96,7 +98,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.itemNameLabel?.text = fridgeItem.name
             cell.itemNameLabel.font = UIFont(name: "GillSans-bold", size: 24)
             cell.expiryDateLabel.font = UIFont(name: "Gill Sans", size: 21)
-            cell.itemNameLabel?.textColor = myPurple
+            cell.itemNameLabel?.textColor = newPurple
             cell.itemImage?.image = UIImage(data: fridgeItem.image! as Data)
             
             if (fridgeItem.expirydate?.isEmpty)! {
@@ -131,7 +133,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 } else {
                     
                     cell.expiryDateLabel.text = "Expires: \(fridgeItem.expirydate!)"
-                    cell.expiryDateLabel.textColor = myPurple
+                    cell.expiryDateLabel.textColor = newPurple
                 }
                 
             }

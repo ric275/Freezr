@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        let newPurple:UIColor = UIColor(red: 125/255.0, green: 80/255.0, blue: 230/255.0, alpha: 1.0)
+        
         //Get rid of back arrow and delete the extra space.
         
         UINavigationBar.appearance().backIndicatorImage = UIImage()
@@ -30,11 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Make everything purple.
         //Purple is bae.
         
-        UINavigationBar.appearance().tintColor = .purple
+        UINavigationBar.appearance().tintColor = newPurple
         
-        UITabBar.appearance().tintColor = .purple
+        UITabBar.appearance().tintColor = newPurple
         
-        UITableViewCell.appearance().tintColor = .purple
+        UITableViewCell.appearance().tintColor = newPurple
         
         //Set up notification request.
         
@@ -193,3 +195,4 @@ extension NSDate {
         return dateWithHoursAdded
     }
 }
+

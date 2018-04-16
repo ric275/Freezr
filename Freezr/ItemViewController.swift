@@ -16,6 +16,8 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     let myPurple:UIColor = UIColor(red: 105/255.0, green: 94/255.0, blue: 133/255.0, alpha: 1.0)
     
+    let newPurple:UIColor = UIColor(red: 125/255.0, green: 80/255.0, blue: 230/255.0, alpha: 1.0)
+    
     //Outlets.
     
     @IBOutlet weak var itemImage: UIImageView!
@@ -71,9 +73,9 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         itemName.returnKeyType = UIReturnKeyType.done
         
-        itemName.textColor = myPurple
+        itemName.textColor = newPurple
         
-        expirationDateTextField.textColor = myPurple
+        expirationDateTextField.textColor = newPurple
         
         itemImage.isUserInteractionEnabled = true
         
