@@ -31,13 +31,16 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emptyMessage1.textColor = newPurple
+        emptyMessage2.textColor = newPurple
+        
         itemListTableView.dataSource = self
         itemListTableView.delegate = self
         
         //Large TEXT
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
-            //navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.purple]
+            //navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: myPurple]
         } else {
             // Fallback on earlier versions
         }
@@ -98,7 +101,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.itemNameLabel?.text = fridgeItem.name
             cell.itemNameLabel.font = UIFont(name: "GillSans-bold", size: 24)
             cell.expiryDateLabel.font = UIFont(name: "Gill Sans", size: 21)
-            cell.itemNameLabel?.textColor = newPurple
+            cell.itemNameLabel?.textColor = .black
             cell.itemImage?.image = UIImage(data: fridgeItem.image! as Data)
             
             if (fridgeItem.expirydate?.isEmpty)! {
@@ -137,7 +140,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
                 
             }
-        
+            
             return cell
             
         }
@@ -216,6 +219,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     //Swipe actions (add to shopping list & delete).
+    
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
@@ -300,74 +304,83 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
         
-        swipeToAdd.backgroundColor = .purple
+        swipeToAdd.backgroundColor = newPurple
         
         //Swipe to delete items from the fridge.
         
         let swipeToDelete = UITableViewRowAction(style: .normal, title: "Delete") { (action:UITableViewRowAction!, NSIndexPath) in
             
-            let fridgeItem = self.fridgeItems[indexPath.row]
-            
-            //Some setup for notifcation deletion.
-            let identifier = fridgeItem.notifid
-            let twoWeekIdentifier = fridgeItem.twoweeknotifid
-            let oneWeekIdentifier = fridgeItem.oneweeknotifid
-            let twoDayIdentifier = fridgeItem.twodaynotifid
-            
-            //This is here to catch the 1.3.2 transition.
-            
-            if fridgeItem.notifid != nil {
-                print("delete:: \(identifier!)")
-            }
-            if fridgeItem.twoweeknotifid != nil {
-                print("two week delete:: \(twoWeekIdentifier!)")
-            }
-            if fridgeItem.oneweeknotifid != nil {
-                print("one week delete:: \(oneWeekIdentifier!)")
-            }
-            if fridgeItem.twodaynotifid != nil {
-                print("two day delete:: \(twoDayIdentifier!)")
-            }
-            
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            context.delete(fridgeItem)
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            
-            //Delete pending notifications.
-            UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
-                var identifiers: [String] = []
-                for notification:UNNotificationRequest in notificationRequests {
-                    
-                    //This is here to catch the 1.3.2 transition.
-                    if identifier != nil {
+            if self.fridgeItems.count == 0 {
+                tableView.reloadData()
+            } else {
+                
+                let fridgeItem = self.fridgeItems[indexPath.row]
+                
+                //Some setup for notifcation deletion.
+                let identifier = fridgeItem.notifid
+                let twoWeekIdentifier = fridgeItem.twoweeknotifid
+                let oneWeekIdentifier = fridgeItem.oneweeknotifid
+                let twoDayIdentifier = fridgeItem.twodaynotifid
+                
+                //This is here to catch the 1.3.2 transition.
+                
+                if fridgeItem.notifid != nil {
+                    print("delete:: \(identifier!)")
+                }
+                if fridgeItem.twoweeknotifid != nil {
+                    print("two week delete:: \(twoWeekIdentifier!)")
+                }
+                if fridgeItem.oneweeknotifid != nil {
+                    print("one week delete:: \(oneWeekIdentifier!)")
+                }
+                if fridgeItem.twodaynotifid != nil {
+                    print("two day delete:: \(twoDayIdentifier!)")
+                }
+                
+                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                context.delete(fridgeItem)
+                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                
+                //Delete pending notifications.
+                UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
+                    var identifiers: [String] = []
+                    for notification:UNNotificationRequest in notificationRequests {
                         
-                        if notification.identifier == "\(identifier!)" {
-                            identifiers.append(notification.identifier)
+                        //This is here to catch the 1.3.2 transition.
+                        if identifier != nil {
                             
-                        } else if notification.identifier == "\(twoWeekIdentifier!)" {
-                            identifiers.append(notification.identifier)
-                            
-                        } else if notification.identifier == "\(oneWeekIdentifier!)" {
-                            identifiers.append(notification.identifier)
-                            
-                        } else if notification.identifier == "\(twoDayIdentifier!)" {
-                            identifiers.append(notification.identifier)
-                            
+                            if notification.identifier == "\(identifier!)" {
+                                identifiers.append(notification.identifier)
+                                
+                            } else if notification.identifier == "\(twoWeekIdentifier!)" {
+                                identifiers.append(notification.identifier)
+                                
+                            } else if notification.identifier == "\(oneWeekIdentifier!)" {
+                                identifiers.append(notification.identifier)
+                                
+                            } else if notification.identifier == "\(twoDayIdentifier!)" {
+                                identifiers.append(notification.identifier)
+                                
+                            }
                         }
                     }
+                    UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
                 }
-                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
+                
+                do {
+                    self.fridgeItems = try context.fetch(FridgeItem.fetchRequest())
+                    tableView.reloadData()
+                } catch {}
             }
-            
-            do {
-                self.fridgeItems = try context.fetch(FridgeItem.fetchRequest())
-                tableView.reloadData()
-            } catch {}
         }
         
         swipeToDelete.backgroundColor = UIColor.red
         
-        return[swipeToDelete, swipeToAdd]
+        if fridgeItems.count == 0 {
+            return nil
+        } else {
+            return[swipeToDelete, swipeToAdd]
+        }
     }
     
     //Final declaration:

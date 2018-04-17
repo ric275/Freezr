@@ -18,6 +18,8 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
     
     let myPurple:UIColor = UIColor(red: 105/255.0, green: 94/255.0, blue: 133/255.0, alpha: 1.0)
     
+    let newPurple:UIColor = UIColor(red: 125/255.0, green: 80/255.0, blue: 230/255.0, alpha: 1.0)
+    
     
     //Variables.
     
@@ -40,9 +42,9 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
             playerView = AVPlayer(url: fileURL as URL)
             playerViewController.player = playerView
             
-            fridgeSwitch.onTintColor = .purple
-            freezerSwitch.onTintColor = .purple
-            soundSwitch.onTintColor = .purple
+            fridgeSwitch.onTintColor = newPurple
+            freezerSwitch.onTintColor = newPurple
+            soundSwitch.onTintColor = newPurple
             
         }
         
@@ -101,17 +103,17 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         
         
         howCell.textLabel?.text = "Video: How to use Freezr"
-        howCell.textLabel?.textColor = .purple
+        howCell.textLabel?.textColor = newPurple
         howCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         howCell.accessoryType =  .disclosureIndicator
         
         aboutCell.textLabel?.text = "About Freezr"
-        aboutCell.textLabel?.textColor = .purple
+        aboutCell.textLabel?.textColor = newPurple
         aboutCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         aboutCell.accessoryType =  .disclosureIndicator
         
         feedbackCell.textLabel?.text = "Send Feedback"
-        feedbackCell.textLabel?.textColor = .purple
+        feedbackCell.textLabel?.textColor = newPurple
         feedbackCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         feedbackCell.detailTextLabel?.text = "jack@blueinkcode.com"
         feedbackCell.detailTextLabel?.textColor = myPurple
@@ -119,12 +121,12 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         feedbackCell.accessoryType =  .disclosureIndicator
         
         websiteCell.textLabel?.text = "Developer Website"
-        websiteCell.textLabel?.textColor = .purple
+        websiteCell.textLabel?.textColor = newPurple
         websiteCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         websiteCell.accessoryType =  .disclosureIndicator
         
         versionCell.textLabel?.text = "App Version:"
-        versionCell.textLabel?.textColor = .purple
+        versionCell.textLabel?.textColor = newPurple
         versionCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             versionCell.detailTextLabel?.text = "\(version)"
@@ -134,7 +136,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         }
         
         fridgeNotifCell.textLabel?.text = "Fridge"
-        fridgeNotifCell.textLabel?.textColor = .purple
+        fridgeNotifCell.textLabel?.textColor = newPurple
         fridgeNotifCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         fridgeNotifCell.selectionStyle = .none
         fridgeNotifCell.accessoryView = fridgeSwitch
@@ -149,7 +151,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         }
         
         freezerNotifCell.textLabel?.text = "Freezer"
-        freezerNotifCell.textLabel?.textColor = .purple
+        freezerNotifCell.textLabel?.textColor = newPurple
         freezerNotifCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         freezerNotifCell.selectionStyle = .none
         freezerNotifCell.accessoryView = freezerSwitch
@@ -164,35 +166,35 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         }
         
         preFreqNeverCell.textLabel?.text = "Never"
-        preFreqNeverCell.textLabel?.textColor = .purple
+        preFreqNeverCell.textLabel?.textColor = newPurple
         preFreqNeverCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         if UserDefaults.standard.bool(forKey: "preFreqNeverTicked") == true {
             preFreqNeverCell.accessoryType = .checkmark
         }
         
         preFreq2WeekCell.textLabel?.text = "2 Weeks Before"
-        preFreq2WeekCell.textLabel?.textColor = .purple
+        preFreq2WeekCell.textLabel?.textColor = newPurple
         preFreq2WeekCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         if UserDefaults.standard.bool(forKey: "preFreq2WeekTicked") == true {
             preFreq2WeekCell.accessoryType = .checkmark
         }
         
         preFreq1WeekCell.textLabel?.text = "1 Week Before"
-        preFreq1WeekCell.textLabel?.textColor = .purple
+        preFreq1WeekCell.textLabel?.textColor = newPurple
         preFreq1WeekCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         if UserDefaults.standard.bool(forKey: "preFreq1WeekTicked") == true {
             preFreq1WeekCell.accessoryType = .checkmark
         }
         
         preFreq2DayCell.textLabel?.text = "2 Days Before"
-        preFreq2DayCell.textLabel?.textColor = .purple
+        preFreq2DayCell.textLabel?.textColor = newPurple
         preFreq2DayCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         if UserDefaults.standard.bool(forKey: "preFreq2DayTicked") == true {
             preFreq2DayCell.accessoryType = .checkmark
         }
         
         soundCell.textLabel?.text = "Disable Sound Effects"
-        soundCell.textLabel?.textColor = .purple
+        soundCell.textLabel?.textColor = newPurple
         soundCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         soundCell.selectionStyle = .none
         soundCell.accessoryView = soundSwitch

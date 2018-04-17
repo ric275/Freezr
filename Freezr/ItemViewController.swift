@@ -77,6 +77,12 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         expirationDateTextField.textColor = newPurple
         
+        placeHolderText1.textColor = newPurple
+        
+        placeHolderText2.textColor = newPurple
+        
+        addToSLButton.tintColor = newPurple
+        
         itemImage.isUserInteractionEnabled = true
         
         //Setup the item view depending on if an existing item is being selected, or a new item is being added.

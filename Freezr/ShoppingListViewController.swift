@@ -34,6 +34,10 @@ class ShoppingListViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emptyMessage1.textColor = newPurple
+        emptyMessage2.textColor = newPurple
+        emptyMessage3.textColor = newPurple
+        
         shoppingListTableView.dataSource = self
         shoppingListTableView.delegate = self
         

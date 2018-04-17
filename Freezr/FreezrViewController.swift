@@ -31,6 +31,9 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emptyMessage1.textColor = newPurple
+        emptyMessage2.textColor = newPurple
+        
         itemListTableView.dataSource = self
         itemListTableView.delegate = self
         
@@ -86,7 +89,7 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if items.count == 0 {
             
             let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
-
+            
             cell.textLabel?.text = "You should probably go buy food."
             cell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
             
@@ -100,7 +103,7 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.itemNameLabel.text = item.name
             cell.itemNameLabel.font = UIFont(name: "GillSans-bold", size: 24)
             cell.expiryDateLabel.font = UIFont(name: "Gill Sans", size: 21)
-            cell.itemNameLabel.textColor = newPurple
+            cell.itemNameLabel.textColor = .black
             cell.itemImage.image = UIImage(data: item.image! as Data)
             
             if (item.expirydate?.isEmpty)! {
@@ -144,8 +147,8 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
     }
-
-
+    
+    
     //What happens when a cell is tapped.
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -300,73 +303,82 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
         
-        swipeToAdd.backgroundColor = .purple
+        swipeToAdd.backgroundColor = newPurple
         
         //Swipe to delete items from the freezer.
         
         let swipeToDelete = UITableViewRowAction(style: .normal, title: "Delete") { (action:UITableViewRowAction!, NSIndexPath) in
             
-            let item = self.items[indexPath.row]
-            
-            //Some setup for notifcation deletion.
-            let identifier = item.notifid
-            let twoWeekIdentifier = item.twoweeknotifid
-            let oneWeekIdentifier = item.oneweeknotifid
-            let twoDayIdentifier = item.twodaynotifid
-            
-            //This is here to catch the 1.3.2 transition.
-            
-            if item.notifid != nil {
-            print("delete:: \(identifier!)")
-            }
-            if item.twoweeknotifid != nil {
-            print("two week delete:: \(twoWeekIdentifier!)")
-            }
-            if item.oneweeknotifid != nil {
-            print("one week delete:: \(oneWeekIdentifier!)")
-            }
-            if item.twodaynotifid != nil {
-            print("two day delete:: \(twoDayIdentifier!)")
-            }
-            
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            context.delete(item)
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            
-            //Delete pending notifications.
-            UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
-                var identifiers: [String] = []
-                for notification:UNNotificationRequest in notificationRequests {
-                    
-                    //This is here to catch the 1.3.2 transition.
-                    if identifier != nil {
-                        
-                    if notification.identifier == "\(identifier!)" {
-                        identifiers.append(notification.identifier)
-                    } else if notification.identifier == "\(twoWeekIdentifier!)" {
-                        identifiers.append(notification.identifier)
-                        
-                    } else if notification.identifier == "\(oneWeekIdentifier!)" {
-                        identifiers.append(notification.identifier)
-                        
-                    } else if notification.identifier == "\(twoDayIdentifier!)" {
-                        identifiers.append(notification.identifier)
-                        
-                    }
-                }
-                }
-                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
-            }
-            
-            do {
-                self.items = try context.fetch(Item.fetchRequest())
+            if self.items.count == 0 {
                 tableView.reloadData()
-            } catch {}
+            } else {
+                
+                let item = self.items[indexPath.row]
+                
+                //Some setup for notifcation deletion.
+                let identifier = item.notifid
+                let twoWeekIdentifier = item.twoweeknotifid
+                let oneWeekIdentifier = item.oneweeknotifid
+                let twoDayIdentifier = item.twodaynotifid
+                
+                //This is here to catch the 1.3.2 transition.
+                
+                if item.notifid != nil {
+                    print("delete:: \(identifier!)")
+                }
+                if item.twoweeknotifid != nil {
+                    print("two week delete:: \(twoWeekIdentifier!)")
+                }
+                if item.oneweeknotifid != nil {
+                    print("one week delete:: \(oneWeekIdentifier!)")
+                }
+                if item.twodaynotifid != nil {
+                    print("two day delete:: \(twoDayIdentifier!)")
+                }
+                
+                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                context.delete(item)
+                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                
+                //Delete pending notifications.
+                UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
+                    var identifiers: [String] = []
+                    for notification:UNNotificationRequest in notificationRequests {
+                        
+                        //This is here to catch the 1.3.2 transition.
+                        if identifier != nil {
+                            
+                            if notification.identifier == "\(identifier!)" {
+                                identifiers.append(notification.identifier)
+                            } else if notification.identifier == "\(twoWeekIdentifier!)" {
+                                identifiers.append(notification.identifier)
+                                
+                            } else if notification.identifier == "\(oneWeekIdentifier!)" {
+                                identifiers.append(notification.identifier)
+                                
+                            } else if notification.identifier == "\(twoDayIdentifier!)" {
+                                identifiers.append(notification.identifier)
+                                
+                            }
+                        }
+                    }
+                    UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
+                }
+                
+                do {
+                    self.items = try context.fetch(Item.fetchRequest())
+                    tableView.reloadData()
+                } catch {}
+            }
         }
         
         swipeToDelete.backgroundColor = UIColor.red
         
-        return[swipeToDelete, swipeToAdd]
+        if items.count == 0 {
+            return nil
+        } else {
+            return[swipeToDelete, swipeToAdd]
+        }
     }
     
     //Final declaration:

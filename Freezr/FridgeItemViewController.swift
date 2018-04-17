@@ -71,6 +71,12 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
         
         expirationDateTextField.textColor = newPurple
         
+        placeHolderText1.textColor = newPurple
+        
+        placeHolderText2.textColor = newPurple
+        
+        addToSLButton.tintColor = newPurple
+        
         fridgeItemImage.isUserInteractionEnabled = true
         
         //Setup the item view depending on if an existing item is being selected, or a new item is being added.
@@ -98,7 +104,10 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
                 
                 let dateString = labelFormatter.string(from: (fridgeItem?.addeddate)!)
                 
-                dateAddedLabel.text = "Date added: \(dateString)"
+                dateAddedLabel.text = "Date added:  \(dateString)"
+                
+                dateAddedLabel.textColor = newPurple
+
             } else {
                 dateAddedLabel.isHidden = true
             }
@@ -136,7 +145,7 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
                 
             }
             
-            //If there is not existing item:
+            //If there is not an existing item:
             
         } else {
             

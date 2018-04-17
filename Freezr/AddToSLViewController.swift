@@ -53,6 +53,12 @@ class AddToSLViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         itemName.textColor = newPurple
         
+        addToSLButton.tintColor = newPurple
+        
+        placeHolderText1.textColor = newPurple
+        
+        placeHolderText2.textColor = newPurple
+        
         
         //Dismiss the keyboard when tapped away (setup).
         
