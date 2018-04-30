@@ -21,7 +21,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
     let newPurple:UIColor = UIColor(red: 125/255.0, green: 80/255.0, blue: 230/255.0, alpha: 1.0)
     
     let newPurple2:UIColor = UIColor(red: 146/255.0, green: 54/255.0, blue: 240/255.0, alpha: 1.0)
-
+    
     
     
     //Variables.
@@ -80,8 +80,10 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
             return 2
         } else if section == 3 {
             return 4
-        } else {
+        } else if section == 4 {
             return 1
+        } else {
+            return 2
         }
     }
     
@@ -103,6 +105,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         let preFreq2DayCell = UITableViewCell(style: .value1, reuseIdentifier: nil)
         let soundCell = UITableViewCell(style: .value1, reuseIdentifier: nil)
         let websiteCell = UITableViewCell(style: .value1, reuseIdentifier: nil)
+        let privacyCell = UITableViewCell(style: .value1, reuseIdentifier: nil)
         
         
         howCell.textLabel?.text = "Video: How to use Freezr"
@@ -137,6 +140,11 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
             versionCell.detailTextLabel?.font = UIFont(name: "Gill Sans", size: 17)
             versionCell.selectionStyle = .none
         }
+        
+        privacyCell.textLabel?.text = "Privacy"
+        privacyCell.textLabel?.textColor = newPurple2
+        privacyCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
+        privacyCell.accessoryType =  .disclosureIndicator
         
         fridgeNotifCell.textLabel?.text = "Fridge"
         fridgeNotifCell.textLabel?.textColor = newPurple2
@@ -242,9 +250,14 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         } else if indexPath.section == 4 {
             return soundCell
         } else {
-            return versionCell
+            if indexPath.row == 0 {
+                return privacyCell
+            } else {
+                return versionCell
+            }
         }
     }
+    
     
     //Specify what happens when a cell is tapped.
     
@@ -254,7 +267,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         
         if indexPath.section == 1 {
             if indexPath.row == 0 {
-                performSegue(withIdentifier: "privacySegue", sender: nil)
+                performSegue(withIdentifier: "aboutSegue", sender: nil)
             } else if indexPath.row == 1 {
                 
                 //What happens when the feedback cell is tapped - send the email.
@@ -275,18 +288,27 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
                 
             }
             
-        } else if indexPath.section == 0 {
-            
             //What happens when the video cell is tapped - play the video.
+            
+        } else if indexPath.section == 0 {
             
             self.present(playerViewController, animated: true) {
                 
                 self.playerViewController.player?.play()
             }
             
+            //What happens when the privacy cell is tapped - open privacy.
+            
+        } else if indexPath.section == 5 {
+            
+            if indexPath.row == 0 {
+                performSegue(withIdentifier: "privacySegue", sender: nil)
+            } else {}
+            
             //What happens when the preFreq cells are tapped - tick them and set UserDefaults.
             
         } else if indexPath.section == 3 {
+            
             if indexPath.row == 0 {
                 
                 let cell = tableView.cellForRow(at: indexPath)!

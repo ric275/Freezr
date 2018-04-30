@@ -116,6 +116,9 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 let dateString = labelFormatter.string(from: (item?.addeddate)!)
                 
                 dateAddedLabel.text = "Date added: \(dateString)"
+                
+                dateAddedLabel.textColor = newPurple2
+                
             } else {
                 dateAddedLabel.isHidden = true
             }
