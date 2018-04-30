@@ -31,8 +31,8 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emptyMessage1.textColor = newPurple
-        emptyMessage2.textColor = newPurple
+        emptyMessage1.textColor = newPurple2
+        emptyMessage2.textColor = newPurple2
         
         itemListTableView.dataSource = self
         itemListTableView.delegate = self
@@ -53,6 +53,9 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let myPurple:UIColor = UIColor(red: 105/255.0, green: 94/255.0, blue: 133/255.0, alpha: 1.0)
     
     let newPurple:UIColor = UIColor(red: 125/255.0, green: 80/255.0, blue: 230/255.0, alpha: 1.0)
+    
+    let newPurple2:UIColor = UIColor(red: 146/255.0, green: 54/255.0, blue: 240/255.0, alpha: 1.0)
+
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -103,7 +106,7 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.itemNameLabel.text = item.name
             cell.itemNameLabel.font = UIFont(name: "GillSans-bold", size: 24)
             cell.expiryDateLabel.font = UIFont(name: "Gill Sans", size: 21)
-            cell.itemNameLabel.textColor = .black
+            cell.itemNameLabel.textColor = newPurple
             cell.itemImage.image = UIImage(data: item.image! as Data)
             
             if (item.expirydate?.isEmpty)! {
@@ -138,7 +141,7 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 } else {
                     
                     cell.expiryDateLabel.text = "Expires: \(item.expirydate!)"
-                    cell.expiryDateLabel.textColor = newPurple
+                    cell.expiryDateLabel.textColor = newPurple2
                 }
             }
             
@@ -303,7 +306,7 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
         
-        swipeToAdd.backgroundColor = newPurple
+        swipeToAdd.backgroundColor = newPurple2
         
         //Swipe to delete items from the freezer.
         

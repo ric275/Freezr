@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let newPurple:UIColor = UIColor(red: 125/255.0, green: 80/255.0, blue: 230/255.0, alpha: 1.0)
+        let newPurple2:UIColor = UIColor(red: 146/255.0, green: 54/255.0, blue: 240/255.0, alpha: 1.0)
+
         
         //Get rid of back arrow and delete the extra space.
         
@@ -32,11 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Make everything purple.
         //Purple is bae.
         
-        UINavigationBar.appearance().tintColor = newPurple
+        UINavigationBar.appearance().tintColor = newPurple2
         
-        UITabBar.appearance().tintColor = newPurple
+        UITabBar.appearance().tintColor = newPurple2
         
-        UITableViewCell.appearance().tintColor = newPurple
+        UITableViewCell.appearance().tintColor = newPurple2
         
         //Set up notification request.
         

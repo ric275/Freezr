@@ -18,6 +18,9 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
     
     let newPurple:UIColor = UIColor(red: 125/255.0, green: 80/255.0, blue: 230/255.0, alpha: 1.0)
     
+    let newPurple2:UIColor = UIColor(red: 146/255.0, green: 54/255.0, blue: 240/255.0, alpha: 1.0)
+
+    
     //Outlets.
     
     @IBOutlet weak var fridgeItemImage: UIImageView!
@@ -67,15 +70,15 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
         
         fridgeItemName.returnKeyType = UIReturnKeyType.done
         
-        fridgeItemName.textColor = newPurple
+        fridgeItemName.textColor = newPurple2
         
-        expirationDateTextField.textColor = newPurple
+        expirationDateTextField.textColor = newPurple2
         
-        placeHolderText1.textColor = newPurple
+        placeHolderText1.textColor = newPurple2
         
-        placeHolderText2.textColor = newPurple
+        placeHolderText2.textColor = newPurple2
         
-        addToSLButton.tintColor = newPurple
+        addToSLButton.tintColor = newPurple2
         
         fridgeItemImage.isUserInteractionEnabled = true
         
@@ -106,7 +109,7 @@ class FridgeItemViewController: UIViewController, UIImagePickerControllerDelegat
                 
                 dateAddedLabel.text = "Date added:  \(dateString)"
                 
-                dateAddedLabel.textColor = newPurple
+                dateAddedLabel.textColor = newPurple2
 
             } else {
                 dateAddedLabel.isHidden = true

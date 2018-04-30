@@ -22,6 +22,7 @@
 		0496E1EC1DB17CE20052E17B /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496E1EB1DB17CE20052E17B /* ShoppingListViewController.swift */; };
 		0498A0331E26A634001D9E50 /* addSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0498A0321E26A634001D9E50 /* addSound.mp3 */; };
 		04B7FAEB1FD36F3F0069D60F /* AddToSLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7FAEA1FD36F3F0069D60F /* AddToSLViewController.swift */; };
+		04DFB9B32097C582009692CC /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DFB9B22097C582009692CC /* PrivacyViewController.swift */; };
 		04E4204A1DABF28700390EF5 /* FreezrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E420491DABF28700390EF5 /* FreezrViewController.swift */; };
 		04EC76101E54D1AA0076E840 /* shoppingListSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04EC760F1E54D1AA0076E840 /* shoppingListSound.mp3 */; };
 		04EC76121E54D46E0076E840 /* deleteSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04EC76111E54D46E0076E840 /* deleteSound.mp3 */; };
@@ -52,6 +53,7 @@
 		0496E1EB1DB17CE20052E17B /* ShoppingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		0498A0321E26A634001D9E50 /* addSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = addSound.mp3; sourceTree = "<group>"; };
 		04B7FAEA1FD36F3F0069D60F /* AddToSLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToSLViewController.swift; sourceTree = "<group>"; };
+		04DFB9B22097C582009692CC /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		04E420491DABF28700390EF5 /* FreezrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezrViewController.swift; sourceTree = "<group>"; };
 		04EC760F1E54D1AA0076E840 /* shoppingListSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shoppingListSound.mp3; sourceTree = "<group>"; };
 		04EC76111E54D46E0076E840 /* deleteSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = deleteSound.mp3; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				04243D021FCEE0AB00D5F85E /* Shopping List */,
 				04F61DBD1DC566930053E9B9 /* InfoViewController.swift */,
 				04642E6A1DAFADBF002E7568 /* AboutViewController.swift */,
+				04DFB9B22097C582009692CC /* PrivacyViewController.swift */,
 				0467321D1DAAE6FA00EEC292 /* Main.storyboard */,
 				046732231DAAE6FA00EEC292 /* Assets.xcassets */,
 				046732251DAAE6FA00EEC292 /* LaunchScreen.storyboard */,
@@ -243,6 +246,7 @@
 				04F5531F201DEA2700C65A23 /* ItemCell.swift in Sources */,
 				046732311DAAF38500EEC292 /* ItemViewController.swift in Sources */,
 				0467321A1DAAE6FA00EEC292 /* AppDelegate.swift in Sources */,
+				04DFB9B32097C582009692CC /* PrivacyViewController.swift in Sources */,
 				047CD5D8205C47E400DA2BBD /* FridgeItemCell.swift in Sources */,
 				0496E1EC1DB17CE20052E17B /* ShoppingListViewController.swift in Sources */,
 				04F61DBE1DC566930053E9B9 /* InfoViewController.swift in Sources */,

@@ -31,12 +31,15 @@ class ShoppingListViewController: UIViewController, UITableViewDelegate, UITable
     
     let newPurple:UIColor = UIColor(red: 125/255.0, green: 80/255.0, blue: 230/255.0, alpha: 1.0)
     
+    let newPurple2:UIColor = UIColor(red: 146/255.0, green: 54/255.0, blue: 240/255.0, alpha: 1.0)
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emptyMessage1.textColor = newPurple
-        emptyMessage2.textColor = newPurple
-        emptyMessage3.textColor = newPurple
+        emptyMessage1.textColor = newPurple2
+        emptyMessage2.textColor = newPurple2
+        emptyMessage3.textColor = newPurple2
         
         shoppingListTableView.dataSource = self
         shoppingListTableView.delegate = self

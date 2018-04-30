@@ -20,6 +20,9 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
     
     let newPurple:UIColor = UIColor(red: 125/255.0, green: 80/255.0, blue: 230/255.0, alpha: 1.0)
     
+    let newPurple2:UIColor = UIColor(red: 146/255.0, green: 54/255.0, blue: 240/255.0, alpha: 1.0)
+
+    
     
     //Variables.
     
@@ -42,9 +45,9 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
             playerView = AVPlayer(url: fileURL as URL)
             playerViewController.player = playerView
             
-            fridgeSwitch.onTintColor = newPurple
-            freezerSwitch.onTintColor = newPurple
-            soundSwitch.onTintColor = newPurple
+            fridgeSwitch.onTintColor = newPurple2
+            freezerSwitch.onTintColor = newPurple2
+            soundSwitch.onTintColor = newPurple2
             
         }
         
@@ -103,17 +106,17 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         
         
         howCell.textLabel?.text = "Video: How to use Freezr"
-        howCell.textLabel?.textColor = newPurple
+        howCell.textLabel?.textColor = newPurple2
         howCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         howCell.accessoryType =  .disclosureIndicator
         
         aboutCell.textLabel?.text = "About Freezr"
-        aboutCell.textLabel?.textColor = newPurple
+        aboutCell.textLabel?.textColor = newPurple2
         aboutCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         aboutCell.accessoryType =  .disclosureIndicator
         
         feedbackCell.textLabel?.text = "Send Feedback"
-        feedbackCell.textLabel?.textColor = newPurple
+        feedbackCell.textLabel?.textColor = newPurple2
         feedbackCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         feedbackCell.detailTextLabel?.text = "jack@blueinkcode.com"
         feedbackCell.detailTextLabel?.textColor = myPurple
@@ -121,12 +124,12 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         feedbackCell.accessoryType =  .disclosureIndicator
         
         websiteCell.textLabel?.text = "Developer Website"
-        websiteCell.textLabel?.textColor = newPurple
+        websiteCell.textLabel?.textColor = newPurple2
         websiteCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         websiteCell.accessoryType =  .disclosureIndicator
         
         versionCell.textLabel?.text = "App Version:"
-        versionCell.textLabel?.textColor = newPurple
+        versionCell.textLabel?.textColor = newPurple2
         versionCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             versionCell.detailTextLabel?.text = "\(version)"
@@ -136,7 +139,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         }
         
         fridgeNotifCell.textLabel?.text = "Fridge"
-        fridgeNotifCell.textLabel?.textColor = newPurple
+        fridgeNotifCell.textLabel?.textColor = newPurple2
         fridgeNotifCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         fridgeNotifCell.selectionStyle = .none
         fridgeNotifCell.accessoryView = fridgeSwitch
@@ -151,7 +154,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         }
         
         freezerNotifCell.textLabel?.text = "Freezer"
-        freezerNotifCell.textLabel?.textColor = newPurple
+        freezerNotifCell.textLabel?.textColor = newPurple2
         freezerNotifCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         freezerNotifCell.selectionStyle = .none
         freezerNotifCell.accessoryView = freezerSwitch
@@ -166,35 +169,35 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         }
         
         preFreqNeverCell.textLabel?.text = "Never"
-        preFreqNeverCell.textLabel?.textColor = newPurple
+        preFreqNeverCell.textLabel?.textColor = newPurple2
         preFreqNeverCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         if UserDefaults.standard.bool(forKey: "preFreqNeverTicked") == true {
             preFreqNeverCell.accessoryType = .checkmark
         }
         
         preFreq2WeekCell.textLabel?.text = "2 Weeks Before"
-        preFreq2WeekCell.textLabel?.textColor = newPurple
+        preFreq2WeekCell.textLabel?.textColor = newPurple2
         preFreq2WeekCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         if UserDefaults.standard.bool(forKey: "preFreq2WeekTicked") == true {
             preFreq2WeekCell.accessoryType = .checkmark
         }
         
         preFreq1WeekCell.textLabel?.text = "1 Week Before"
-        preFreq1WeekCell.textLabel?.textColor = newPurple
+        preFreq1WeekCell.textLabel?.textColor = newPurple2
         preFreq1WeekCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         if UserDefaults.standard.bool(forKey: "preFreq1WeekTicked") == true {
             preFreq1WeekCell.accessoryType = .checkmark
         }
         
         preFreq2DayCell.textLabel?.text = "2 Days Before"
-        preFreq2DayCell.textLabel?.textColor = newPurple
+        preFreq2DayCell.textLabel?.textColor = newPurple2
         preFreq2DayCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         if UserDefaults.standard.bool(forKey: "preFreq2DayTicked") == true {
             preFreq2DayCell.accessoryType = .checkmark
         }
         
         soundCell.textLabel?.text = "Disable Sound Effects"
-        soundCell.textLabel?.textColor = newPurple
+        soundCell.textLabel?.textColor = newPurple2
         soundCell.textLabel?.font = UIFont(name: "Gill Sans", size: 17)
         soundCell.selectionStyle = .none
         soundCell.accessoryView = soundSwitch
@@ -247,11 +250,11 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //What happens when the about cell is tapped - send the email.
+        //What happens when the about cell is tapped - move to about view.
         
         if indexPath.section == 1 {
             if indexPath.row == 0 {
-                performSegue(withIdentifier: "aboutSegue", sender: nil)
+                performSegue(withIdentifier: "privacySegue", sender: nil)
             } else if indexPath.row == 1 {
                 
                 //What happens when the feedback cell is tapped - send the email.
@@ -385,7 +388,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
         
         mailComposerVC.setToRecipients(["jack@blueinkcode.com"])
         mailComposerVC.setSubject("Freezr Feedback")
-        mailComposerVC.setMessageBody("*You can use this email to inform us of any bugs or let us know about any feature requests.\n", isHTML: false)
+        mailComposerVC.setMessageBody("*You can use this email to inform me of any bugs or let me know about any feature requests.\n", isHTML: false)
         
         return mailComposerVC
     }

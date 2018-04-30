@@ -14,6 +14,9 @@ class AboutViewController: UIViewController {
     
     let myPurple:UIColor = UIColor(red: 105/255.0, green: 94/255.0, blue: 133/255.0, alpha: 1.0)
     
+    let newPurple2:UIColor = UIColor(red: 146/255.0, green: 54/255.0, blue: 240/255.0, alpha: 1.0)
+
+    
     //Outlets - loads of label outlets because I'm too lazy to change the text colour in the storyboard.
     
     @IBOutlet var aboutView: UIView!
@@ -37,7 +40,7 @@ class AboutViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        aboutView.backgroundColor = myPurple
+        aboutView.backgroundColor = newPurple2
         label1.textColor = .white
         label2.textColor = .white
         label3.textColor = .white
