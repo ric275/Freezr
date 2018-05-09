@@ -804,17 +804,6 @@
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uB-b2-LCG">
-                                <rect key="frame" x="157.66666666666666" y="445.66666666666669" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="7Fz-5j-raL"/>
-                                    <constraint firstAttribute="height" constant="60" id="7TN-go-1sP"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="ice-cream"/>
-                                <connections>
-                                    <action selector="easterEggTapped:" destination="7lV-NW-Ydg" eventType="touchUpInside" id="rJl-5o-dxM"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add items directly to the built-in shopping list so you never run out. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIe-86-fZa">
                                 <rect key="frame" x="37" y="257" width="301" height="39.333333333333314"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
@@ -848,13 +837,24 @@
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uB-b2-LCG">
+                                <rect key="frame" x="159.66666666666666" y="460.66666666666674" width="56" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="O8H-Fg-p61"/>
+                                    <constraint firstAttribute="height" constant="142" id="eN4-m2-rZ8"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Lolly"/>
+                                <connections>
+                                    <action selector="easterEggTapped:" destination="7lV-NW-Ydg" eventType="touchUpInside" id="rJl-5o-dxM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kbI-Du-uYc" firstAttribute="centerX" secondItem="PhM-j4-ubW" secondAttribute="centerX" id="3az-WE-kP1"/>
                             <constraint firstItem="kbI-Du-uYc" firstAttribute="width" secondItem="PTk-h4-pkW" secondAttribute="width" id="5dO-yY-rmF"/>
                             <constraint firstItem="UKK-pP-Pel" firstAttribute="centerX" secondItem="PhM-j4-ubW" secondAttribute="centerX" id="AsF-UT-okl"/>
-                            <constraint firstItem="5uB-b2-LCG" firstAttribute="top" secondItem="Xvs-1n-f62" secondAttribute="bottom" constant="15" id="Bia-EN-Lj0"/>
+                            <constraint firstItem="5uB-b2-LCG" firstAttribute="top" secondItem="Xvs-1n-f62" secondAttribute="bottom" constant="30" id="Bia-EN-Lj0"/>
                             <constraint firstItem="zLK-Em-7uz" firstAttribute="width" secondItem="PTk-h4-pkW" secondAttribute="width" id="D0j-br-UDc"/>
                             <constraint firstItem="HF8-bz-Gzz" firstAttribute="top" secondItem="PTk-h4-pkW" secondAttribute="bottom" constant="12" id="DpR-fJ-eHd"/>
                             <constraint firstItem="SIe-86-fZa" firstAttribute="centerX" secondItem="PhM-j4-ubW" secondAttribute="centerX" id="Iua-Cb-fNH"/>
@@ -893,7 +893,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0v-kB-Q4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132.5" y="813.38028169014081"/>
+            <point key="canvasLocation" x="1132" y="812.807881773399"/>
         </scene>
         <!--Shopping List-->
         <scene sceneID="vtq-FB-eWr">
@@ -1351,6 +1351,7 @@ Last updated May 2018.</string>
     </scenes>
     <resources>
         <image name="GDPRicon" width="170" height="170"/>
+        <image name="Lolly" width="74" height="188"/>
         <image name="SettingsIcon" width="22" height="22"/>
         <image name="TabBarFreezrIcon" width="25" height="25"/>
         <image name="TabBarFridgeIcon" width="25" height="25"/>
@@ -1358,7 +1359,6 @@ Last updated May 2018.</string>
         <image name="TabBarSelectedFridgeIcon" width="25" height="25"/>
         <image name="TabBarSelectedShoppingListIcon" width="25" height="25"/>
         <image name="TabBarShoppingIcon" width="25" height="25"/>
-        <image name="ice-cream" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="IMp-m8-2bd"/>
