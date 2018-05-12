@@ -1322,7 +1322,7 @@ Last updated May 2018.</string>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ovd-ZA-AoM" firstAttribute="top" secondItem="XcA-f1-qfu" secondAttribute="bottom" constant="100" id="0sn-95-b3t"/>
                             <constraint firstItem="L74-rz-EaO" firstAttribute="centerX" secondItem="UVb-po-uo1" secondAttribute="centerX" id="XHm-kh-THb"/>

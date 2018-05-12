@@ -164,6 +164,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             addToSLButton.isHidden = true
             //addItemOrUpdateButton.isEnabled = false
             dateAddedLabel.isHidden = true
+            itemImage.isHidden = true 
         }
         
         
