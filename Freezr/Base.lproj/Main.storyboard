@@ -793,46 +793,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Freezr to keep track of the food in your fridge or freezer." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HF8-bz-Gzz">
-                                <rect key="frame" x="37" y="154.33333333333334" width="301" height="39.333333333333343"/>
+                                <rect key="frame" x="18.666666666666657" y="154.33333333333334" width="337.66666666666674" height="39.333333333333343"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap shopping list items to tick them off as you buy them." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKK-pP-Pel">
-                                <rect key="frame" x="37" y="308.33333333333331" width="301" height="39.333333333333314"/>
+                                <rect key="frame" x="18.666666666666657" y="308.33333333333331" width="337.66666666666674" height="39.333333333333314"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add items directly to the built-in shopping list so you never run out. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIe-86-fZa">
-                                <rect key="frame" x="37" y="257" width="301" height="39.333333333333314"/>
+                                <rect key="frame" x="18.666666666666657" y="257" width="337.66666666666674" height="39.333333333333314"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Freezr is a simple food organiser developed by Jack Taylor." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTk-h4-pkW">
-                                <rect key="frame" x="37" y="103" width="301" height="39.333333333333343"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="301" id="cKi-VF-JPz"/>
-                                </constraints>
+                                <rect key="frame" x="18.666666666666657" y="103" width="337.66666666666674" height="39.333333333333343"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The awesome Freezr icon was designed by Keon White of keonxavier.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbI-Du-uYc">
-                                <rect key="frame" x="37" y="359.66666666666669" width="301" height="39.333333333333314"/>
+                                <rect key="frame" x="18.666666666666657" y="359.66666666666669" width="337.66666666666674" height="39.333333333333314"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you so much for using Freezr!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvs-1n-f62">
-                                <rect key="frame" x="37" y="411" width="301" height="19.666666666666686"/>
+                                <rect key="frame" x="18.666666666666657" y="411" width="337.66666666666674" height="19.666666666666686"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recieve alerts up to 2 weeks before your food reaches it's expiry date." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLK-Em-7uz">
-                                <rect key="frame" x="37" y="205.66666666666666" width="301" height="39.333333333333343"/>
+                                <rect key="frame" x="18.666666666666657" y="205.66666666666666" width="337.66666666666674" height="39.333333333333343"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -871,12 +868,13 @@
                             <constraint firstItem="UKK-pP-Pel" firstAttribute="top" secondItem="SIe-86-fZa" secondAttribute="bottom" constant="12" id="rsH-3i-Bhn"/>
                             <constraint firstItem="Xvs-1n-f62" firstAttribute="top" secondItem="kbI-Du-uYc" secondAttribute="bottom" constant="12" id="s2P-iV-HYo"/>
                             <constraint firstItem="zLK-Em-7uz" firstAttribute="centerX" secondItem="PhM-j4-ubW" secondAttribute="centerX" id="sJa-UG-FeB"/>
+                            <constraint firstItem="PTk-h4-pkW" firstAttribute="width" secondItem="PhM-j4-ubW" secondAttribute="width" multiplier="0.9" id="uZ0-mW-dkB"/>
                             <constraint firstItem="HF8-bz-Gzz" firstAttribute="width" secondItem="PTk-h4-pkW" secondAttribute="width" id="ue2-r1-9wI"/>
                             <constraint firstItem="Xvs-1n-f62" firstAttribute="centerX" secondItem="PhM-j4-ubW" secondAttribute="centerX" id="xga-ma-r2y"/>
                             <constraint firstItem="zLK-Em-7uz" firstAttribute="top" secondItem="HF8-bz-Gzz" secondAttribute="bottom" constant="12" id="yIV-Se-5tR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About" id="0ad-EY-id1">
+                    <navigationItem key="navigationItem" title="About" largeTitleDisplayMode="never" id="0ad-EY-id1">
                         <barButtonItem key="backBarButtonItem" title="Back" id="SBv-MT-GVR"/>
                     </navigationItem>
                     <connections>
@@ -1304,10 +1302,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="33" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="L74-rz-EaO">
-                                <rect key="frame" x="17.666666666666657" y="318" width="340" height="215"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="340" id="X6I-5O-61q"/>
-                                </constraints>
+                                <rect key="frame" x="19.333333333333343" y="318" width="337.33333333333326" height="215"/>
                                 <string key="text">Freezr’s privacy policy is very straightforward.
 
 At this current moment in time, Freezr collects no personal data from you, the user, besides any app analytics from Apple that you opt into. 
@@ -1332,6 +1327,7 @@ Last updated May 2018.</string>
                             <constraint firstItem="ovd-ZA-AoM" firstAttribute="top" secondItem="XcA-f1-qfu" secondAttribute="bottom" constant="100" id="0sn-95-b3t"/>
                             <constraint firstItem="L74-rz-EaO" firstAttribute="centerX" secondItem="UVb-po-uo1" secondAttribute="centerX" id="XHm-kh-THb"/>
                             <constraint firstItem="ovd-ZA-AoM" firstAttribute="centerX" secondItem="UVb-po-uo1" secondAttribute="centerX" id="YVl-6v-RSd"/>
+                            <constraint firstItem="L74-rz-EaO" firstAttribute="width" secondItem="UVb-po-uo1" secondAttribute="width" multiplier="0.9" id="awg-PH-ohU"/>
                             <constraint firstItem="L74-rz-EaO" firstAttribute="top" secondItem="ovd-ZA-AoM" secondAttribute="bottom" constant="50" id="yE7-H6-ayZ"/>
                         </constraints>
                     </view>
