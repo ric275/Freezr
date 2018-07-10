@@ -106,7 +106,7 @@ class AddToSLViewController: UIViewController, UIImagePickerControllerDelegate, 
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             
             let SLItem = ShoppingListItem(context: context)
-            let defaultImage = UIImage(named: "shoppingListTemp")
+            let defaultImage = UIImage(named: "shoppingList")
             SLItem.name = itemName.text
             SLItem.isChecked = false
             
