@@ -63,7 +63,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zhs-7K-D7D">
-                                                    <rect key="frame" x="293" y="6.3333333333333357" width="75" height="75"/>
+                                                    <rect key="frame" x="238" y="6.3333333333333357" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="Da7-4v-5xq"/>
                                                         <constraint firstAttribute="height" constant="75" id="Ebq-CX-w56"/>
@@ -243,7 +243,7 @@
                                         <rect key="frame" x="0.0" y="774.00000000000011" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YeW-1H-25p" id="he4-BZ-AZ0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -255,7 +255,7 @@
                                         <rect key="frame" x="0.0" y="893.33333333333348" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o5L-Nm-Lf3" id="uB7-qL-eNg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -263,7 +263,7 @@
                                         <rect key="frame" x="0.0" y="937.33333333333348" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Chy-sv-tak" id="GOL-iR-bGo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -303,7 +303,7 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uI7-d4-1Uz">
-                                <rect key="frame" x="28" y="496.66666666666669" width="319" height="30.000000000000057"/>
+                                <rect key="frame" x="28" y="518" width="319" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
@@ -312,19 +312,19 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expires:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6k-Fu-edo">
-                                <rect key="frame" x="167" y="478.66666666666669" width="41" height="16"/>
+                                <rect key="frame" x="167" y="500" width="41" height="16"/>
                                 <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="14"/>
                                 <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5rx-kh-Ue2">
-                                <rect key="frame" x="28" y="436.66666666666669" width="319" height="30"/>
+                                <rect key="frame" x="28" y="458" width="319" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDl-H8-uue">
-                                <rect key="frame" x="170" y="418.66666666666669" width="35" height="16"/>
+                                <rect key="frame" x="170" y="440" width="35" height="16"/>
                                 <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="14"/>
                                 <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -349,15 +349,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be given a default image if you do not set your own." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKi-NB-IFu">
-                                <rect key="frame" x="18.666666666666657" y="573.66666666666663" width="337.66666666666674" height="15"/>
+                                <rect key="frame" x="18.666666666666657" y="593" width="337.66666666666674" height="15"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-YZ-Spl">
-                                <rect key="frame" x="100.66666666666669" y="573.66666666666663" width="174" height="32"/>
+                                <rect key="frame" x="8" y="645" width="106" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="Add item to shopping list">
+                                <state key="normal" title="+ Shopping List">
                                     <color key="titleColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -366,7 +366,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv1-RZ-CXS">
-                                <rect key="frame" x="118.66666666666669" y="536.66666666666663" width="138" height="32"/>
+                                <rect key="frame" x="118.66666666666669" y="556" width="138" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Add item to freezer"/>
                                 <connections>
@@ -374,16 +374,10 @@
                                     <action selector="addToFridgeTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="Eg2-fR-Jjk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date added: 27/12/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA1-1g-dsO">
-                                <rect key="frame" x="127" y="660.33333333333337" width="121" height="16.333333333333371"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
-                                <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHx-Wc-0uh">
-                                <rect key="frame" x="136" y="613.66666666666663" width="103" height="32"/>
+                                <rect key="frame" x="293" y="645" width="58" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="Delete item">
+                                <state key="normal" title="Delete">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -391,14 +385,21 @@
                                     <action selector="deleteItemTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="zhq-zG-qA8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date added: 27/12/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA1-1g-dsO">
+                                <rect key="frame" x="127" y="408.66666666666669" width="121" height="16.333333333333314"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="top" secondItem="S6k-Fu-edo" secondAttribute="bottom" constant="2" id="0Xz-RT-3jV"/>
                             <constraint firstItem="tA1-1g-dsO" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="1JO-Ka-M1r"/>
-                            <constraint firstItem="tA1-1g-dsO" firstAttribute="top" secondItem="jHx-Wc-0uh" secondAttribute="bottom" constant="14.5" id="230-66-xWa"/>
+                            <constraint firstItem="7k6-vA-6KD" firstAttribute="top" secondItem="ZEy-YZ-Spl" secondAttribute="bottom" constant="8" id="2qO-kI-noc"/>
+                            <constraint firstItem="tA1-1g-dsO" firstAttribute="top" secondItem="7wE-fg-BPV" secondAttribute="bottom" constant="2" id="4CI-9u-tKh"/>
                             <constraint firstItem="S6k-Fu-edo" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="4do-qe-Pj5"/>
-                            <constraint firstItem="jHx-Wc-0uh" firstAttribute="top" secondItem="ZEy-YZ-Spl" secondAttribute="bottom" constant="8" id="Cab-Pe-BTQ"/>
+                            <constraint firstItem="ZEy-YZ-Spl" firstAttribute="leading" secondItem="ZSs-Xm-hP9" secondAttribute="leading" constant="8" id="4h6-ms-bRy"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="top" secondItem="NDl-H8-uue" secondAttribute="bottom" constant="2" id="DUn-X6-q1u"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="Ftc-hm-kcn"/>
                             <constraint firstItem="hv1-RZ-CXS" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="H8b-bs-yTc"/>
@@ -409,18 +410,17 @@
                             <constraint firstItem="mQP-c0-GzI" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="Ry8-bh-z5X"/>
                             <constraint firstItem="5rx-kh-Ue2" firstAttribute="width" secondItem="7wE-fg-BPV" secondAttribute="width" id="T5k-Md-HiX"/>
                             <constraint firstItem="gKi-NB-IFu" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="WsK-7e-132"/>
+                            <constraint firstItem="7k6-vA-6KD" firstAttribute="top" secondItem="jHx-Wc-0uh" secondAttribute="bottom" constant="8" id="acf-Ms-zcp"/>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="top" secondItem="5rx-kh-Ue2" secondAttribute="bottom" constant="30" id="bw9-JR-4Fz"/>
-                            <constraint firstItem="hv1-RZ-CXS" firstAttribute="top" secondItem="uI7-d4-1Uz" secondAttribute="bottom" constant="10" id="dCJ-hd-DMS"/>
+                            <constraint firstItem="hv1-RZ-CXS" firstAttribute="top" secondItem="uI7-d4-1Uz" secondAttribute="bottom" constant="8" id="dCJ-hd-DMS"/>
                             <constraint firstItem="uI7-d4-1Uz" firstAttribute="width" secondItem="5rx-kh-Ue2" secondAttribute="width" id="dtH-OV-gEF"/>
-                            <constraint firstItem="jHx-Wc-0uh" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="f5U-3Z-YRp"/>
                             <constraint firstItem="7wE-fg-BPV" firstAttribute="width" secondItem="ZSs-Xm-hP9" secondAttribute="width" multiplier="0.85" id="fba-rr-Kw9"/>
                             <constraint firstItem="gKi-NB-IFu" firstAttribute="top" secondItem="hv1-RZ-CXS" secondAttribute="bottom" constant="5" id="kQT-iY-iky"/>
-                            <constraint firstItem="ZEy-YZ-Spl" firstAttribute="centerX" secondItem="ZSs-Xm-hP9" secondAttribute="centerX" id="ndu-PX-bke"/>
-                            <constraint firstItem="5rx-kh-Ue2" firstAttribute="top" secondItem="7wE-fg-BPV" secondAttribute="bottom" constant="30" id="omB-gL-RAm"/>
+                            <constraint firstItem="NDl-H8-uue" firstAttribute="top" secondItem="tA1-1g-dsO" secondAttribute="bottom" constant="15" id="ns8-59-fdn"/>
                             <constraint firstItem="mQP-c0-GzI" firstAttribute="top" secondItem="McK-js-lft" secondAttribute="bottom" constant="8" id="ozZ-iA-H6h"/>
                             <constraint firstItem="McK-js-lft" firstAttribute="top" secondItem="dlb-8f-5Lo" secondAttribute="bottom" constant="80" id="s7s-9J-I8K"/>
                             <constraint firstItem="gKi-NB-IFu" firstAttribute="width" secondItem="ZSs-Xm-hP9" secondAttribute="width" multiplier="0.9" id="tr3-1U-KA7"/>
-                            <constraint firstItem="ZEy-YZ-Spl" firstAttribute="top" secondItem="hv1-RZ-CXS" secondAttribute="bottom" constant="5" id="vli-YI-bhs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jHx-Wc-0uh" secondAttribute="trailing" constant="8" id="vx8-kq-ROh"/>
                             <constraint firstItem="7wE-fg-BPV" firstAttribute="top" secondItem="dlb-8f-5Lo" secondAttribute="bottom" id="w5a-mg-pqk"/>
                         </constraints>
                     </view>
@@ -962,7 +962,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2zM-WM-7R6">
-                                                    <rect key="frame" x="292" y="6.3333333333333357" width="75" height="75"/>
+                                                    <rect key="frame" x="237" y="6.3333333333333357" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="aHy-h2-vC5"/>
                                                         <constraint firstAttribute="height" constant="75" id="qAa-Bb-76V"/>
@@ -1064,40 +1064,13 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sz-If-CZI">
-                                <rect key="frame" x="123.66666666666669" y="536.66666666666663" width="128" height="32"/>
+                                <rect key="frame" x="123.66666666666669" y="556.66666666666663" width="128" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Add item to fridge"/>
                                 <connections>
                                     <action selector="addToFridgeTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="6hb-lJ-VB0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UE1-CE-Jta">
-                                <rect key="frame" x="28" y="496.66666666666669" width="319" height="30.000000000000057"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                                <connections>
-                                    <action selector="editingExpirationDateTextField:" destination="50X-2Q-R6b" eventType="editingDidBegin" id="FL5-kC-wlk"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expires:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGE-Eq-SB1">
-                                <rect key="frame" x="167" y="478.66666666666669" width="41" height="16"/>
-                                <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="14"/>
-                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xi4-FQ-uoD">
-                                <rect key="frame" x="28" y="436.66666666666669" width="319" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sH-VX-jpu">
-                                <rect key="frame" x="169.66666666666666" y="418.66666666666669" width="36" height="16"/>
-                                <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="14"/>
-                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the camera icon to take a new photo." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQh-1M-0aF">
                                 <rect key="frame" x="44" y="222" width="287.33333333333331" height="46"/>
                                 <constraints>
@@ -1107,20 +1080,10 @@
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2l-Jy-rqt">
-                                <rect key="frame" x="100.66666666666669" y="573.66666666666663" width="174" height="32"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="Add item to shopping list">
-                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addToSLTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="UcV-FF-BtS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsg-FX-HGE">
-                                <rect key="frame" x="136" y="613.66666666666663" width="103" height="32"/>
+                                <rect key="frame" x="293" y="645" width="58" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="Delete item">
+                                <state key="normal" title="Delete">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -1128,7 +1091,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be given a default image if you do not set your own." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpe-4a-a4H">
-                                <rect key="frame" x="18.666666666666657" y="573.66666666666663" width="337.66666666666674" height="15"/>
+                                <rect key="frame" x="18.666666666666657" y="593.66666666666663" width="337.66666666666674" height="15"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1144,40 +1107,77 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date added: 27/12/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2f-m1-dv4">
-                                <rect key="frame" x="126.66666666666669" y="660.33333333333337" width="122" height="17"/>
+                                <rect key="frame" x="126.66666666666669" y="408.66666666666669" width="122" height="17"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
                                 <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UE1-CE-Jta">
+                                <rect key="frame" x="28" y="518.66666666666663" width="319" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <connections>
+                                    <action selector="editingExpirationDateTextField:" destination="50X-2Q-R6b" eventType="editingDidBegin" id="FL5-kC-wlk"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Expires:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGE-Eq-SB1">
+                                <rect key="frame" x="166" y="499" width="41" height="16"/>
+                                <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xi4-FQ-uoD">
+                                <rect key="frame" x="28" y="458.66666666666669" width="319" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sH-VX-jpu">
+                                <rect key="frame" x="169.66666666666666" y="440.66666666666669" width="36" height="16"/>
+                                <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2l-Jy-rqt">
+                                <rect key="frame" x="8" y="645" width="106" height="32"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="+ Shopping List">
+                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToSLTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="UcV-FF-BtS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="C2l-Jy-rqt" firstAttribute="top" secondItem="3sz-If-CZI" secondAttribute="bottom" constant="5" id="1I8-co-HRE"/>
                             <constraint firstItem="UE1-CE-Jta" firstAttribute="top" secondItem="xi4-FQ-uoD" secondAttribute="bottom" constant="30" id="1vY-QH-YhU"/>
                             <constraint firstItem="UE1-CE-Jta" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="35i-8I-2Ba"/>
                             <constraint firstItem="xi4-FQ-uoD" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="4hw-UR-MVU"/>
-                            <constraint firstItem="xi4-FQ-uoD" firstAttribute="top" secondItem="HYZ-fs-2pJ" secondAttribute="bottom" constant="30" id="6YF-x2-8Wg"/>
+                            <constraint firstItem="q2Z-H1-IyD" firstAttribute="top" secondItem="dsg-FX-HGE" secondAttribute="bottom" constant="8" id="6YJ-zX-S2u"/>
                             <constraint firstItem="HYZ-fs-2pJ" firstAttribute="top" secondItem="LgM-bY-M30" secondAttribute="bottom" id="7bD-Px-n8H"/>
                             <constraint firstItem="UE1-CE-Jta" firstAttribute="top" secondItem="fGE-Eq-SB1" secondAttribute="bottom" constant="2" id="AlD-rD-sdM"/>
                             <constraint firstItem="xi4-FQ-uoD" firstAttribute="top" secondItem="1sH-VX-jpu" secondAttribute="bottom" constant="2" id="DCB-mB-Gnf"/>
                             <constraint firstItem="xi4-FQ-uoD" firstAttribute="width" secondItem="HYZ-fs-2pJ" secondAttribute="width" id="GBQ-dr-eYo"/>
-                            <constraint firstItem="dsg-FX-HGE" firstAttribute="top" secondItem="C2l-Jy-rqt" secondAttribute="bottom" constant="8" id="IG6-1i-YMr"/>
                             <constraint firstItem="dpe-4a-a4H" firstAttribute="top" secondItem="3sz-If-CZI" secondAttribute="bottom" constant="5" id="K7q-bK-K3t"/>
                             <constraint firstItem="fGE-Eq-SB1" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="KJK-pz-RfA"/>
                             <constraint firstItem="zQh-1M-0aF" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="LhZ-pg-Zyp"/>
-                            <constraint firstItem="3sz-If-CZI" firstAttribute="top" secondItem="UE1-CE-Jta" secondAttribute="bottom" constant="10" id="SuT-rW-rq0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dsg-FX-HGE" secondAttribute="trailing" constant="8" id="NSD-jc-u6R"/>
+                            <constraint firstItem="3sz-If-CZI" firstAttribute="top" secondItem="UE1-CE-Jta" secondAttribute="bottom" constant="8" id="SuT-rW-rq0"/>
+                            <constraint firstItem="B2f-m1-dv4" firstAttribute="top" secondItem="HYZ-fs-2pJ" secondAttribute="bottom" constant="2" id="Tbl-RB-TYi"/>
                             <constraint firstItem="WRK-uk-B20" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="U7n-Hs-N8x"/>
                             <constraint firstItem="zQh-1M-0aF" firstAttribute="top" secondItem="WRK-uk-B20" secondAttribute="bottom" constant="8" id="WKJ-Zz-GAD"/>
                             <constraint firstItem="3sz-If-CZI" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="WfQ-Yt-ZIF"/>
                             <constraint firstItem="WRK-uk-B20" firstAttribute="top" secondItem="LgM-bY-M30" secondAttribute="bottom" constant="80" id="apU-08-5fp"/>
                             <constraint firstItem="1sH-VX-jpu" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="d64-Wg-A5n"/>
-                            <constraint firstItem="C2l-Jy-rqt" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="dOj-6x-S00"/>
                             <constraint firstItem="B2f-m1-dv4" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="dcL-wI-LEg"/>
+                            <constraint firstItem="1sH-VX-jpu" firstAttribute="top" secondItem="B2f-m1-dv4" secondAttribute="bottom" constant="15" id="fBi-x5-M5K"/>
                             <constraint firstItem="HYZ-fs-2pJ" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="fGg-2v-hbm"/>
+                            <constraint firstItem="q2Z-H1-IyD" firstAttribute="top" secondItem="C2l-Jy-rqt" secondAttribute="bottom" constant="8" id="fho-s0-NeI"/>
+                            <constraint firstItem="C2l-Jy-rqt" firstAttribute="leading" secondItem="ifo-CU-X7y" secondAttribute="leading" constant="8" id="fnA-dt-aG2"/>
                             <constraint firstItem="dpe-4a-a4H" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="hvW-2g-rIF"/>
                             <constraint firstItem="UE1-CE-Jta" firstAttribute="width" secondItem="xi4-FQ-uoD" secondAttribute="width" id="kI2-l5-Bvt"/>
-                            <constraint firstItem="B2f-m1-dv4" firstAttribute="top" secondItem="dsg-FX-HGE" secondAttribute="bottom" constant="14.5" id="lUC-z4-qk6"/>
-                            <constraint firstItem="dsg-FX-HGE" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="prD-vJ-kOw"/>
                             <constraint firstItem="dpe-4a-a4H" firstAttribute="width" secondItem="ifo-CU-X7y" secondAttribute="width" multiplier="0.9" id="pwb-ID-DhA"/>
                             <constraint firstItem="HYZ-fs-2pJ" firstAttribute="width" secondItem="ifo-CU-X7y" secondAttribute="width" multiplier="0.85" id="rv6-fJ-Xqk"/>
                         </constraints>
@@ -1298,20 +1298,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="33" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="L74-rz-EaO">
-                                <rect key="frame" x="18.666666666666657" y="318" width="337.66666666666674" height="215"/>
+                                <rect key="frame" x="18.666666666666657" y="293" width="337.66666666666674" height="215"/>
                                 <string key="text">Freezr’s privacy policy is very straightforward.
 
 At this current moment in time, Freezr collects no personal data from you, the user, besides any app analytics from Apple that you opt into. 
 
 If, in the future, I build a feature into Freezr that absolutely requires storage of any form of your data, this page will be updated accordingly.
 
-Last updated May 2018.</string>
+Last updated July 2018.</string>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GDPRicon" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-ZA-AoM">
-                                <rect key="frame" x="147.66666666666666" y="188" width="80" height="80"/>
+                                <rect key="frame" x="147.66666666666666" y="163" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="j1A-o1-g9f"/>
                                     <constraint firstAttribute="height" constant="80" id="mF2-Eu-7Dm"/>
@@ -1320,7 +1320,7 @@ Last updated May 2018.</string>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ovd-ZA-AoM" firstAttribute="top" secondItem="XcA-f1-qfu" secondAttribute="bottom" constant="100" id="0sn-95-b3t"/>
+                            <constraint firstItem="ovd-ZA-AoM" firstAttribute="top" secondItem="XcA-f1-qfu" secondAttribute="bottom" constant="75" id="0sn-95-b3t"/>
                             <constraint firstItem="L74-rz-EaO" firstAttribute="centerX" secondItem="UVb-po-uo1" secondAttribute="centerX" id="XHm-kh-THb"/>
                             <constraint firstItem="ovd-ZA-AoM" firstAttribute="centerX" secondItem="UVb-po-uo1" secondAttribute="centerX" id="YVl-6v-RSd"/>
                             <constraint firstItem="L74-rz-EaO" firstAttribute="width" secondItem="UVb-po-uo1" secondAttribute="width" multiplier="0.9" id="awg-PH-ohU"/>
