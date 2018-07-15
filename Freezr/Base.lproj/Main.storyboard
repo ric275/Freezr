@@ -63,7 +63,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zhs-7K-D7D">
-                                                    <rect key="frame" x="293" y="6.5" width="75" height="75"/>
+                                                    <rect key="frame" x="1284" y="6.5" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="Da7-4v-5xq"/>
                                                         <constraint firstAttribute="height" constant="75" id="Ebq-CX-w56"/>
@@ -962,7 +962,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2zM-WM-7R6">
-                                                    <rect key="frame" x="292" y="6.5" width="75" height="75"/>
+                                                    <rect key="frame" x="1283" y="6.5" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="aHy-h2-vC5"/>
                                                         <constraint firstAttribute="height" constant="75" id="qAa-Bb-76V"/>
@@ -1058,10 +1058,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HYZ-fs-2pJ">
-                                <rect key="frame" x="62.5" y="70" width="709" height="709"/>
+                                <rect key="frame" x="192" y="120" width="450" height="450"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HYZ-fs-2pJ" secondAttribute="height" multiplier="1:1" id="FYB-Dv-zFL"/>
+                                    <constraint firstAttribute="height" constant="450" id="LQX-et-yOL"/>
+                                    <constraint firstAttribute="width" constant="450" id="MHW-6J-hH2"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LQX-et-yOL"/>
+                                        <exclude reference="MHW-6J-hH2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="FYB-Dv-zFL"/>
+                                        <include reference="LQX-et-yOL"/>
+                                        <include reference="MHW-6J-hH2"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sz-If-CZI">
                                 <rect key="frame" x="353" y="932" width="128" height="32"/>
@@ -1071,15 +1086,6 @@
                                     <action selector="addToFridgeTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="6hb-lJ-VB0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the camera icon to take a new photo." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQh-1M-0aF">
-                                <rect key="frame" x="273.5" y="204" width="287.5" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="noR-h7-m36"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsg-FX-HGE">
                                 <rect key="frame" x="748" y="972" width="58" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
@@ -1091,29 +1097,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be given a default image if you do not set your own." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpe-4a-a4H">
-                                <rect key="frame" x="41.5" y="969" width="751" height="15"/>
+                                <rect key="frame" x="258.5" y="969" width="317.5" height="15"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap 'Photos' to select an image from your Photo Library." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRK-uk-B20">
-                                <rect key="frame" x="271.5" y="150" width="291" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="XPg-XL-N9Z"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="320" id="oDA-Ra-a3q"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date added: 27/12/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2f-m1-dv4">
-                                <rect key="frame" x="356" y="784" width="122" height="17"/>
+                                <rect key="frame" x="356" y="590" width="122" height="17"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
                                 <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UE1-CE-Jta">
-                                <rect key="frame" x="62.5" y="894" width="709" height="30"/>
+                                <rect key="frame" x="192" y="700" width="450" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
@@ -1121,20 +1117,20 @@
                                     <action selector="editingExpirationDateTextField:" destination="50X-2Q-R6b" eventType="editingDidBegin" id="FL5-kC-wlk"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Expires:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGE-Eq-SB1">
-                                <rect key="frame" x="166" y="499" width="41" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expires:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGE-Eq-SB1">
+                                <rect key="frame" x="396.5" y="682" width="41" height="16"/>
                                 <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="14"/>
                                 <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xi4-FQ-uoD">
-                                <rect key="frame" x="62.5" y="834" width="709" height="30"/>
+                                <rect key="frame" x="192" y="640" width="450" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sH-VX-jpu">
-                                <rect key="frame" x="399" y="816" width="36" height="16"/>
+                                <rect key="frame" x="399" y="622" width="36" height="16"/>
                                 <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="14"/>
                                 <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1149,27 +1145,55 @@
                                     <action selector="addToSLTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="UcV-FF-BtS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the camera icon to take a new photo." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQh-1M-0aF">
+                                <rect key="frame" x="273.5" y="344" width="287.5" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="noR-h7-m36"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap 'Photos' to select an image from your Photo Library." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRK-uk-B20">
+                                <rect key="frame" x="271.5" y="290" width="291" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="XPg-XL-N9Z"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="320" id="oDA-Ra-a3q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UE1-CE-Jta" firstAttribute="top" secondItem="xi4-FQ-uoD" secondAttribute="bottom" constant="30" id="1vY-QH-YhU"/>
                             <constraint firstItem="UE1-CE-Jta" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="35i-8I-2Ba"/>
                             <constraint firstItem="xi4-FQ-uoD" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="4hw-UR-MVU"/>
+                            <constraint firstItem="xi4-FQ-uoD" firstAttribute="width" secondItem="HYZ-fs-2pJ" secondAttribute="width" id="6Kz-49-KgK"/>
                             <constraint firstItem="q2Z-H1-IyD" firstAttribute="top" secondItem="dsg-FX-HGE" secondAttribute="bottom" constant="8" id="6YJ-zX-S2u"/>
                             <constraint firstItem="HYZ-fs-2pJ" firstAttribute="top" secondItem="LgM-bY-M30" secondAttribute="bottom" id="7bD-Px-n8H"/>
                             <constraint firstItem="UE1-CE-Jta" firstAttribute="top" secondItem="fGE-Eq-SB1" secondAttribute="bottom" constant="2" id="AlD-rD-sdM"/>
+                            <constraint firstItem="q2Z-H1-IyD" firstAttribute="top" secondItem="dpe-4a-a4H" secondAttribute="bottom" constant="28" id="CO3-OZ-YWc"/>
                             <constraint firstItem="xi4-FQ-uoD" firstAttribute="top" secondItem="1sH-VX-jpu" secondAttribute="bottom" constant="2" id="DCB-mB-Gnf"/>
                             <constraint firstItem="xi4-FQ-uoD" firstAttribute="width" secondItem="HYZ-fs-2pJ" secondAttribute="width" id="GBQ-dr-eYo"/>
+                            <constraint firstItem="dpe-4a-a4H" firstAttribute="top" secondItem="3sz-If-CZI" secondAttribute="bottom" constant="5" id="HfD-Pc-HhJ"/>
                             <constraint firstItem="dpe-4a-a4H" firstAttribute="top" secondItem="3sz-If-CZI" secondAttribute="bottom" constant="5" id="K7q-bK-K3t"/>
                             <constraint firstItem="fGE-Eq-SB1" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="KJK-pz-RfA"/>
                             <constraint firstItem="zQh-1M-0aF" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="LhZ-pg-Zyp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dsg-FX-HGE" secondAttribute="trailing" constant="8" id="NSD-jc-u6R"/>
                             <constraint firstItem="3sz-If-CZI" firstAttribute="top" secondItem="UE1-CE-Jta" secondAttribute="bottom" constant="8" id="SuT-rW-rq0"/>
+                            <constraint firstItem="HYZ-fs-2pJ" firstAttribute="top" secondItem="LgM-bY-M30" secondAttribute="bottom" constant="188" id="TVw-Fr-EHq"/>
                             <constraint firstItem="B2f-m1-dv4" firstAttribute="top" secondItem="HYZ-fs-2pJ" secondAttribute="bottom" constant="5" id="Tbl-RB-TYi"/>
                             <constraint firstItem="WRK-uk-B20" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="U7n-Hs-N8x"/>
+                            <constraint firstItem="HYZ-fs-2pJ" firstAttribute="centerY" secondItem="ifo-CU-X7y" secondAttribute="centerY" id="Ui6-QZ-lWE"/>
                             <constraint firstItem="zQh-1M-0aF" firstAttribute="top" secondItem="WRK-uk-B20" secondAttribute="bottom" constant="8" id="WKJ-Zz-GAD"/>
+                            <constraint firstItem="UE1-CE-Jta" firstAttribute="width" secondItem="HYZ-fs-2pJ" secondAttribute="width" id="WOI-gj-lVz"/>
                             <constraint firstItem="3sz-If-CZI" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="WfQ-Yt-ZIF"/>
                             <constraint firstItem="WRK-uk-B20" firstAttribute="top" secondItem="LgM-bY-M30" secondAttribute="bottom" constant="80" id="apU-08-5fp"/>
+                            <constraint firstItem="HYZ-fs-2pJ" firstAttribute="top" secondItem="LgM-bY-M30" secondAttribute="bottom" constant="150" id="ch0-fs-y4U">
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
                             <constraint firstItem="1sH-VX-jpu" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="d64-Wg-A5n"/>
                             <constraint firstItem="B2f-m1-dv4" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="dcL-wI-LEg"/>
                             <constraint firstItem="1sH-VX-jpu" firstAttribute="top" secondItem="B2f-m1-dv4" secondAttribute="bottom" constant="15" id="fBi-x5-M5K"/>
@@ -1179,8 +1203,49 @@
                             <constraint firstItem="dpe-4a-a4H" firstAttribute="centerX" secondItem="ifo-CU-X7y" secondAttribute="centerX" id="hvW-2g-rIF"/>
                             <constraint firstItem="UE1-CE-Jta" firstAttribute="width" secondItem="xi4-FQ-uoD" secondAttribute="width" id="kI2-l5-Bvt"/>
                             <constraint firstItem="dpe-4a-a4H" firstAttribute="width" secondItem="ifo-CU-X7y" secondAttribute="width" multiplier="0.9" id="pwb-ID-DhA"/>
+                            <constraint firstItem="B2f-m1-dv4" firstAttribute="top" secondItem="HYZ-fs-2pJ" secondAttribute="bottom" constant="76" id="q6K-jT-sxA">
+                                <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                            </constraint>
                             <constraint firstItem="HYZ-fs-2pJ" firstAttribute="width" secondItem="ifo-CU-X7y" secondAttribute="width" multiplier="0.85" id="rv6-fJ-Xqk"/>
+                            <constraint firstItem="WRK-uk-B20" firstAttribute="top" secondItem="LgM-bY-M30" secondAttribute="bottom" constant="363" id="xg6-Y2-2Zr">
+                                <variation key="heightClass=regular-widthClass=regular" constant="220"/>
+                            </constraint>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TVw-Fr-EHq"/>
+                                <exclude reference="Ui6-QZ-lWE"/>
+                                <exclude reference="ch0-fs-y4U"/>
+                                <exclude reference="xg6-Y2-2Zr"/>
+                                <exclude reference="6Kz-49-KgK"/>
+                                <exclude reference="q6K-jT-sxA"/>
+                                <exclude reference="WOI-gj-lVz"/>
+                                <exclude reference="HfD-Pc-HhJ"/>
+                                <exclude reference="CO3-OZ-YWc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="7bD-Px-n8H"/>
+                                <exclude reference="TVw-Fr-EHq"/>
+                                <exclude reference="Ui6-QZ-lWE"/>
+                                <include reference="ch0-fs-y4U"/>
+                                <exclude reference="rv6-fJ-Xqk"/>
+                                <exclude reference="apU-08-5fp"/>
+                                <include reference="xg6-Y2-2Zr"/>
+                                <include reference="6Kz-49-KgK"/>
+                                <exclude reference="GBQ-dr-eYo"/>
+                                <exclude reference="Tbl-RB-TYi"/>
+                                <include reference="q6K-jT-sxA"/>
+                                <include reference="WOI-gj-lVz"/>
+                                <exclude reference="kI2-l5-Bvt"/>
+                                <exclude reference="SuT-rW-rq0"/>
+                                <include reference="HfD-Pc-HhJ"/>
+                                <exclude reference="K7q-bK-K3t"/>
+                                <exclude reference="pwb-ID-DhA"/>
+                                <include reference="CO3-OZ-YWc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="3Le-BP-Frv">
@@ -1215,7 +1280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIN-Zb-s4i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2631.1999999999998" y="-1567.2413793103449"/>
+            <point key="canvasLocation" x="2630.9352517985612" y="-1567.4460431654677"/>
         </scene>
         <!--Fridge Image View Controller-->
         <scene sceneID="b6v-JJ-MhP">
