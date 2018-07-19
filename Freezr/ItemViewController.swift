@@ -84,7 +84,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         placeHolderText2.textColor = newPurple2
         
-        addToSLButton.tintColor = newPurple2
+        addToSLButton.titleLabel?.textColor = newPurple2
         
         itemImage.isUserInteractionEnabled = true
         
@@ -102,6 +102,8 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             placeHolderText1.isHidden = true
             placeHolderText2.isHidden = true
             imageNoticeText.isHidden = true
+            
+            
             
             addItemOrUpdateButton.setTitle("Update item", for: .normal)
             

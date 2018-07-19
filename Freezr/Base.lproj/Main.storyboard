@@ -63,7 +63,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zhs-7K-D7D">
-                                                    <rect key="frame" x="752" y="6.3333333333333357" width="75" height="75"/>
+                                                    <rect key="frame" x="293" y="6.3333333333333357" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="Da7-4v-5xq"/>
                                                         <constraint firstAttribute="height" constant="75" id="Ebq-CX-w56"/>
@@ -243,7 +243,7 @@
                                         <rect key="frame" x="0.0" y="774.00000000000011" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YeW-1H-25p" id="he4-BZ-AZ0">
-                                            <rect key="frame" x="0.0" y="0.0" width="834" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -255,7 +255,7 @@
                                         <rect key="frame" x="0.0" y="893.33333333333348" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o5L-Nm-Lf3" id="uB7-qL-eNg">
-                                            <rect key="frame" x="0.0" y="0.0" width="834" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -263,7 +263,7 @@
                                         <rect key="frame" x="0.0" y="937.33333333333348" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Chy-sv-tak" id="GOL-iR-bGo">
-                                            <rect key="frame" x="0.0" y="0.0" width="834" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -350,11 +350,17 @@
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-YZ-Spl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-YZ-Spl">
                                 <rect key="frame" x="8" y="645" width="106" height="32"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="+ Shopping List">
-                                    <color key="titleColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="+ Shopping List">
+                                            <attributes>
+                                                <color key="NSColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="17" name="GillSans"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <action selector="addToSLTapped:" destination="50X-2Q-R6b" eventType="touchUpInside" id="8NZ-sO-C6y"/>
@@ -575,7 +581,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap '+' to get started! 🛒" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="81Y-TC-hQD">
-                                <rect key="frame" x="95.333333333333314" y="421.66666666666669" width="184.66666666666669" height="21"/>
+                                <rect key="frame" x="95.333333333333329" y="421.66666666666669" width="184.66666666666669" height="21"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1036,7 +1042,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2zM-WM-7R6">
-                                                    <rect key="frame" x="751" y="6.3333333333333357" width="75" height="75"/>
+                                                    <rect key="frame" x="292" y="6.3333333333333357" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="aHy-h2-vC5"/>
                                                         <constraint firstAttribute="height" constant="75" id="qAa-Bb-76V"/>
@@ -1293,8 +1299,8 @@
                                 <exclude reference="Ui6-QZ-lWE"/>
                                 <exclude reference="ch0-fs-y4U"/>
                                 <exclude reference="xg6-Y2-2Zr"/>
-                                <exclude reference="6Kz-49-KgK"/>
                                 <exclude reference="q6K-jT-sxA"/>
+                                <exclude reference="6Kz-49-KgK"/>
                                 <exclude reference="WOI-gj-lVz"/>
                                 <exclude reference="HfD-Pc-HhJ"/>
                                 <exclude reference="CO3-OZ-YWc"/>
@@ -1309,10 +1315,10 @@
                                 <exclude reference="rv6-fJ-Xqk"/>
                                 <exclude reference="apU-08-5fp"/>
                                 <include reference="xg6-Y2-2Zr"/>
-                                <include reference="6Kz-49-KgK"/>
-                                <exclude reference="GBQ-dr-eYo"/>
                                 <exclude reference="Tbl-RB-TYi"/>
                                 <include reference="q6K-jT-sxA"/>
+                                <include reference="6Kz-49-KgK"/>
+                                <exclude reference="GBQ-dr-eYo"/>
                                 <include reference="WOI-gj-lVz"/>
                                 <exclude reference="kI2-l5-Bvt"/>
                                 <exclude reference="SuT-rW-rq0"/>
