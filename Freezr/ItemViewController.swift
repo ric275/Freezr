@@ -166,7 +166,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             addToSLButton.isHidden = true
             //addItemOrUpdateButton.isEnabled = false
             dateAddedLabel.isHidden = true
-            itemImage.isHidden = true 
+            //itemImage.isHidden = true 
         }
         
         
@@ -207,7 +207,6 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imageNoticeText.isHidden = true
         
         addItemOrUpdateButton.isEnabled = true
-        
     }
     
     //What happens when Add or Update is tapped.

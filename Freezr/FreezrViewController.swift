@@ -106,7 +106,7 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.itemNameLabel.text = item.name
             cell.itemNameLabel.font = UIFont(name: "GillSans-bold", size: 24)
             cell.expiryDateLabel.font = UIFont(name: "Gill Sans", size: 21)
-            cell.itemNameLabel.textColor = newPurple
+            cell.itemNameLabel.textColor = myPurple
             cell.itemImage.image = UIImage(data: item.image! as Data)
             
             if (item.expirydate?.isEmpty)! {
@@ -141,7 +141,7 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 } else {
                     
                     cell.expiryDateLabel.text = "Expires: \(item.expirydate!)"
-                    cell.expiryDateLabel.textColor = newPurple2
+                    cell.expiryDateLabel.textColor = newPurple
                 }
             }
             

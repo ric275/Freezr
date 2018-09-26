@@ -104,7 +104,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.itemNameLabel?.text = fridgeItem.name
             cell.itemNameLabel.font = UIFont(name: "GillSans-bold", size: 24)
             cell.expiryDateLabel.font = UIFont(name: "Gill Sans", size: 21)
-            cell.itemNameLabel?.textColor = newPurple
+            cell.itemNameLabel?.textColor = myPurple
             cell.itemImage?.image = UIImage(data: fridgeItem.image! as Data)
             
             if (fridgeItem.expirydate?.isEmpty)! {
@@ -139,7 +139,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 } else {
                     
                     cell.expiryDateLabel.text = "Expires: \(fridgeItem.expirydate!)"
-                    cell.expiryDateLabel.textColor = newPurple2
+                    cell.expiryDateLabel.textColor = newPurple
                 }
                 
             }
