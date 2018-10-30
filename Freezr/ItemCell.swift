@@ -15,5 +15,4 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var itemNameLabel: UILabel!
     
     @IBOutlet weak var expiryDateLabel: UILabel!
-    
 }

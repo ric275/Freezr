@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import AVFoundation
+import StoreKit
 
 class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
@@ -370,6 +371,23 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
         
         navigationController!.popViewController(animated: true)
+        
+        //Ratings
+        
+        if #available(iOS 10.3, *) {
+        SKStoreReviewController.requestReview()
+        } else {}
+        
+        //Haptics
+        
+        let impact = UIImpactFeedbackGenerator() // 1
+        
+        
+        impact.impactOccurred() // 2
+        
+        
+        
+        
     }
     
     //What happens when delete is tapped.
