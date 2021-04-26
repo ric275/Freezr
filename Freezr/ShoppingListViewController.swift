@@ -172,7 +172,7 @@ class ShoppingListViewController: UIViewController, UITableViewDelegate, UITable
     
     //Swipe to delete setup.
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let item = SLItems[indexPath.row]
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

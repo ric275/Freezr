@@ -284,7 +284,7 @@ class InfoViewController: UITableViewController, MFMailComposeViewControllerDele
                 
                 let bicURL = URL(string: "https://blueinkcode.com")! as URL
                 
-                UIApplication.shared.open(bicURL, options: [:], completionHandler: nil)
+                UIApplication.shared.open(bicURL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
                 
             }
             
@@ -515,4 +515,9 @@ class LandscapeAVPlayerController: AVPlayerViewController {
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .landscape
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

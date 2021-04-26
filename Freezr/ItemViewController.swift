@@ -196,8 +196,11 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     //Method called when an image has been selected.
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
+        let image = infoconvertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage) as! UIImage
         
         itemImage.image = image
         
@@ -219,7 +222,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         if item != nil {
             item!.name = itemName.text
-            item!.image = UIImageJPEGRepresentation(itemImage.image!, 0.05)! as Data?
+            item!.image = itemImage.image!.jpegData(compressionQuality: 0.05)! as Data?
             item?.expirydate = expirationDateTextField.text
             
             //Okay this is confusing - what this does is, when hitting update, it will create a notifID ONLY if there isn't already one. This should ONLY ever happen after the 1.3.1 > 1.3.2 transition.
@@ -267,9 +270,9 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 let defaultImage = UIImage(named: "freezerTemp")
                 
                 if itemImage.image == nil {
-                    item.image = UIImageJPEGRepresentation(defaultImage!, 0.05)! as Data?
+                    item.image = defaultImage!.jpegData(compressionQuality: 0.05)! as Data?
                 } else {
-                    item.image = UIImageJPEGRepresentation(itemImage.image!, 0.05)! as Data? //was 0.1
+                    item.image = itemImage.image!.jpegData(compressionQuality: 0.05)! as Data? //was 0.1
                 }
                 
                 item.addeddate = today as Date
@@ -324,7 +327,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         //Set up sound playback
         
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setCategoryconvertFromAVAudioSessionCategory(AVAudioSession.Category.ambient)
         } catch {
             print("sound error1")
         }
@@ -454,7 +457,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         //Set up sound playback
         
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setCategoryconvertFromAVAudioSessionCategory(AVAudioSession.Category.ambient)
         } catch {
             print("sound error1")
         }
@@ -492,11 +495,11 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBAction func editingExpirationDateTextField(_ sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
         
-        datePickerView.datePickerMode = UIDatePickerMode.date
+        datePickerView.datePickerMode = UIDatePicker.Mode.date
         
         sender.inputView = datePickerView
         
-        datePickerView.addTarget(self, action: #selector(ItemViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
+        datePickerView.addTarget(self, action: #selector(ItemViewController.datePickerValueChanged), for: UIControl.Event.valueChanged)
     }
     
     //DATE CHANGED
@@ -531,7 +534,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         let SLItem = ShoppingListItem(context: context)
         SLItem.name = itemName.text
-        SLItem.image = UIImageJPEGRepresentation(itemImage.image!, 0.05)! as Data?
+        SLItem.image = itemImage.image!.jpegData(compressionQuality: 0.05)! as Data?
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
@@ -544,7 +547,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         //Set up sound playback
         
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setCategoryconvertFromAVAudioSessionCategory(AVAudioSession.Category.ambient)
         } catch {
             print("sound error1")
         }
@@ -654,7 +657,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         } else {
             content.body = "\(itemName.text!) has expired in your freezer."
         }
-        content.sound = UNNotificationSound.init(named: "notifSound.mp3")
+        content.sound = UNNotificationSound.init(named: convertToUNNotificationSoundName("notifSound.mp3"))
         
         let identifier = NSString.localizedUserNotificationString(forKey: "\(String(describing: today))", arguments: nil)
         
@@ -688,7 +691,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             } else {
                 content.body = "\(itemName.text!) (in your freezer) will expire in 2 weeks."
             }
-            content.sound = UNNotificationSound.init(named: "notifSound.mp3")
+            content.sound = UNNotificationSound.init(named: convertToUNNotificationSoundName("notifSound.mp3"))
             
             let identifier = NSString.localizedUserNotificationString(forKey: "\(String(describing: today))" + "2week", arguments: nil)
             
@@ -723,7 +726,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             } else {
                 content.body = "\(itemName.text!) (in your freezer) will expire in 1 week."
             }
-            content.sound = UNNotificationSound.init(named: "notifSound.mp3")
+            content.sound = UNNotificationSound.init(named: convertToUNNotificationSoundName("notifSound.mp3"))
             
             let identifier = NSString.localizedUserNotificationString(forKey: "\(String(describing: today))" + "1week", arguments: nil)
             
@@ -758,7 +761,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             } else {
                 content.body = "\(itemName.text!) (in your freezer) will expire in just 2 days."
             }
-            content.sound = UNNotificationSound.init(named: "notifSound.mp3")
+            content.sound = UNNotificationSound.init(named: convertToUNNotificationSoundName("notifSound.mp3"))
             
             let identifier = NSString.localizedUserNotificationString(forKey: "\(String(describing: today))" + "2day", arguments: nil)
             
@@ -793,7 +796,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         } else {
             content.body = "\(itemName.text!) has expired in your freezer."
         }
-        content.sound = UNNotificationSound.init(named: "notifSound.mp3")
+        content.sound = UNNotificationSound.init(named: convertToUNNotificationSoundName("notifSound.mp3"))
         
         let identifier = NSString.localizedUserNotificationString(forKey: "\(String(describing: item!.notifid!))", arguments: nil)
         
@@ -825,7 +828,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             } else {
                 content.body = "\(itemName.text!) (in your freezer) will expire in 2 weeks."
             }
-            content.sound = UNNotificationSound.init(named: "notifSound.mp3")
+            content.sound = UNNotificationSound.init(named: convertToUNNotificationSoundName("notifSound.mp3"))
             
             let identifier = NSString.localizedUserNotificationString(forKey: "\(String(describing: item!.notifid!))" + "2week", arguments: nil)
             
@@ -860,7 +863,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             } else {
                 content.body = "\(itemName.text!) (in your freezer) will expire in 1 week."
             }
-            content.sound = UNNotificationSound.init(named: "notifSound.mp3")
+            content.sound = UNNotificationSound.init(named: convertToUNNotificationSoundName("notifSound.mp3"))
             
             let identifier = NSString.localizedUserNotificationString(forKey: "\(String(describing: item!.notifid!))" + "1week", arguments: nil)
             
@@ -895,7 +898,7 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             } else {
                 content.body = "\(itemName.text!) (in your freezer) will expire in just 2 days."
             }
-            content.sound = UNNotificationSound.init(named: "notifSound.mp3")
+            content.sound = UNNotificationSound.init(named: convertToUNNotificationSoundName("notifSound.mp3"))
             
             let identifier = NSString.localizedUserNotificationString(forKey: "\(String(describing: item!.notifid!))" + "2day", arguments: nil)
             
@@ -924,4 +927,24 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     //Final declaration:
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUNNotificationSoundName(_ input: String) -> UNNotificationSoundName {
+	return UNNotificationSoundName(rawValue: input)
 }

@@ -82,8 +82,11 @@ class AddToSLViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     //Method called when an image has been selected.
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
+        let image = infoconvertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage) as! UIImage
         
         itemImage.image = image
         
@@ -111,9 +114,9 @@ class AddToSLViewController: UIViewController, UIImagePickerControllerDelegate, 
             SLItem.isChecked = false
             
             if itemImage.image == nil {
-                SLItem.image = UIImageJPEGRepresentation(defaultImage!, 0.05)! as Data?
+                SLItem.image = defaultImage!.jpegData(compressionQuality: 0.05)! as Data?
             } else {
-                SLItem.image = UIImageJPEGRepresentation(itemImage.image!, 0.05)! as Data?
+                SLItem.image = itemImage.image!.jpegData(compressionQuality: 0.05)! as Data?
             }
             
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
@@ -127,7 +130,7 @@ class AddToSLViewController: UIViewController, UIImagePickerControllerDelegate, 
             //Set up sound playback
             
             do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+                try AVAudioSession.sharedInstance().setCategoryconvertFromAVAudioSessionCategory(AVAudioSession.Category.ambient)
             } catch {
                 print("sound error1")
             }
@@ -204,4 +207,19 @@ class AddToSLViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     //Final declaration:
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }

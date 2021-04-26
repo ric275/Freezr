@@ -246,7 +246,7 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
             //Set up sound playback
             
             do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+                try AVAudioSession.sharedInstance().setCategoryconvertFromAVAudioSessionCategory(AVAudioSession.Category.ambient)
             } catch {
                 print("sound error1")
             }
@@ -386,4 +386,9 @@ class FreezrViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //Final declaration:
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }
